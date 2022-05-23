@@ -1,0 +1,95 @@
+﻿@page
+@model Piranha.Manager.Areas.Manager.Pages.TaoVeModel
+@inject ManagerLocalizer Localizer
+@inject Piranha.IApi Api
+@{
+}
+<div id="formview">
+    <div class="card m-3">
+        <h4>Tạo mã vé</h4>
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+
+
+                <div class="form-group col-4">
+                    @Html.Label("Số lượng vé") <span class="text-danger"> (*)</span>
+                    @Html.TextBox("SoLuongVe", null, new { @class = "form-control",onkeyup="this.value = minmax(this.value, 100, 10000)"})
+                </div>
+                <div class="form-group col-4">
+                    @Html.Label("Loại vé")<span class="text-danger"> (*)</span>
+                    <select class="form-control" id="LoaiVe" name="LoaiVe">
+                        <option value="">
+                            Chọn loại vé
+                        </option>
+                        <option value="1">
+                            Vé ngày thường
+                        </option>
+                        <option value="2">
+                            Vé ngày lễ, cuối tuần
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group col-4" style="margin-top:29px">
+                    <a href="javascript:void(0)" style="cursor:pointer;float:left" onclick="TaoMaVe(this)" class="btn btn-primary ml-2">Tạo mã vé</a>
+                </div>
+                <div class="form-group col-12">
+                    <p> <span class="text-danger">Ghi chú: </span>Số lượng vé nhập từ 100 đến 10000</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    $("#LoaiVe").select2();
+    $('#SoLuongVe').keyup(function(e) {
+        if ((e.keyCode > 47 && e.keyCode < 58) || (e.keyCode < 106 && e.keyCode > 95)) {
+            this.value = this.value.replace(/(\d{3})\?/g, '$1-');
+            return true;
+        }
+        //remove all chars, except dash and digits
+        this.value = this.value.replace(/[^\-0-9]/g, '');
+    });
+
+    function TaoMaVe(e) {
+        if ($("#LoaiVe").val() >= 100 && $("#LoaiVe").val() <= 10000 && $("#SoLuongVe").val() > 0 ) {
+            var soVe = $("#SoLuongVe").val();
+            var loaiVe = $("#LoaiVe option:selected").text();
+            var dialog = SconnectJs.showConfirmDialog(`Bạn chắc chắn muốn tạo ${soVe} Loại ${loaiVe}?`);
+            dialog.find(".cmd-save").click(function() {
+                $(".cmd-save").hide();
+                $.ajax({
+                    type: "GET",
+                    url: "/Manager/TaoVe?handler=TaoDuLieuVe",
+                    data: {
+                        SoLuongVe: $("#SoLuongVe").val(),
+                        LoaiVe: $("#LoaiVe").val()
+                    },
+                    success: function(data) {
+                        if (data) {
+                            dialog.modal('hide');
+                            toastr.success(`Đã tạo dữ liệu ${soVe} vé, loại ${loaiVe}`);
+                            setTimeout(function() {
+                                location.href = "/quan-ly-ve/?LoaiVe=" + $("#LoaiVe").val() + "&TrangThai=0"
+                            }, 1000);
+                        }
+                        else {
+                            toastr.error("Có lỗi");
+                            dialog.modal('hide');
+                        }
+                    },
+                    error: function() {
+                        alert("Lỗi");
+                        dialog.modal('hide');
+                    }
+                });
+            })
+        }
+        else {
+            toastr.error("Vui lòng nhập đầy đủ thông tin");
+        }
+
+    }
+          //url: "handler?handler=TaoVe",
+</script>

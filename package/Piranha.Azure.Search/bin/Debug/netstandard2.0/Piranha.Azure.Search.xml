@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.Azure.Search</name>
+    </assembly>
+    <members>
+        <member name="T:Piranha.Azure.Search.Content">
+            <summary>
+            Search index model for Azure Search.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Content.ContentId">
+            <summary>
+            Gets/sets the unique content id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Content.Slug">
+            <summary>
+            Gets/sets the content slug.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Content.ContentType">
+            <summary>
+            Gets/sets the content type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Content.Title">
+            <summary>
+            Gets/sets the main title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Content.Category">
+            <summary>
+            Gets/sets the optional category.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Content.Tags">
+            <summary>
+            Gets/sets the optional tags.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Content.Body">
+            <summary>
+            Gets/sets the main body.
+            </summary>
+        </member>
+        <member name="T:Piranha.Azure.Search.Module">
+            <summary>
+            The identity module.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Module.Author">
+            <summary>
+            Gets the Author
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Module.Name">
+            <summary>
+            Gets the Name
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Module.Version">
+            <summary>
+            Gets the Version
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Module.Description">
+            <summary>
+            Gets the description
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Module.PackageUrl">
+            <summary>
+            Gets the package url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.Search.Module.IconUrl">
+            <summary>
+            Gets the icon url.
+            </summary>
+        </member>
+        <member name="M:Piranha.Azure.Search.Module.Init">
+            <summary>
+            Initializes the module.
+            </summary>
+        </member>
+        <member name="T:Piranha.Azure.Search.Services.AzureSearchService">
+            <summary>
+            The identity module.
+            </summary>
+        </member>
+        <member name="M:Piranha.Azure.Search.Services.AzureSearchService.#ctor(System.String,System.String)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="serviceName">The search service name</param>
+            <param name="apiKey">The admin api key</param>
+        </member>
+        <member name="M:Piranha.Azure.Search.Services.AzureSearchService.CreateIndexes">
+            <summary>
+            Creates the main search indexes.
+            </summary>
+        </member>
+        <member name="M:Piranha.Azure.Search.Services.AzureSearchService.SavePageAsync(Piranha.Models.PageBase)">
+            <summary>
+            Creates or updates the searchable content for the
+            given page.
+            </summary>
+            <param name="page">The page</param>
+        </member>
+        <member name="M:Piranha.Azure.Search.Services.AzureSearchService.DeletePageAsync(Piranha.Models.PageBase)">
+            <summary>
+            Deletes the given page from the search index.
+            </summary>
+            <param name="page">The page to delete</param>
+        </member>
+        <member name="M:Piranha.Azure.Search.Services.AzureSearchService.SavePostAsync(Piranha.Models.PostBase)">
+            <summary>
+            Creates or updates the searchable content for the
+            given post.
+            </summary>
+            <param name="post">The post</param>
+        </member>
+        <member name="M:Piranha.Azure.Search.Services.AzureSearchService.DeletePostAsync(Piranha.Models.PostBase)">
+            <summary>
+            Deletes the given post from the search index.
+            </summary>
+            <param name="post">The post to delete</param>
+        </member>
+        <member name="M:Piranha.Azure.Search.Services.AzureSearchService.CreateClient">
+            <summary>
+            Creates the search client.
+            </summary>
+        </member>
+        <member name="M:PiranhaSearchExtensions.UseAzureSearch(Piranha.PiranhaServiceBuilder,System.String,System.String)">
+            <summary>
+            Adds the Azure Search module.
+            </summary>
+            <param name="serviceBuilder">The service builder</param>
+            <param name="serviceName">The unique name of the azure search service</param>
+            <param name="apiKey">The admin api key</param>
+            <returns>The services</returns>
+        </member>
+        <member name="M:PiranhaSearchExtensions.AddPiranhaAzureSearch(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String)">
+            <summary>
+            Adds the Azure Search module.
+            </summary>
+            <param name="services">The current service collection</param>
+            <param name="serviceName">The unique name of the azure search service</param>
+            <param name="apiKey">The admin api key</param>
+            <returns>The services</returns>
+        </member>
+    </members>
+</doc>

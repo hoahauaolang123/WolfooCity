@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.Local.FileStorage</name>
+    </assembly>
+    <members>
+        <member name="M:Piranha.Local.FileStorage.#ctor(System.String,System.String,Piranha.Local.FileStorageNaming)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="basePath">The optional base path</param>
+            <param name="baseUrl">The optional base url</param>
+            <param name="naming">How uploaded media files should be named</param>
+        </member>
+        <member name="M:Piranha.Local.FileStorage.OpenAsync">
+            <summary>
+            Opens a new storage session.
+            </summary>
+            <returns>A new open session</returns>
+        </member>
+        <member name="M:Piranha.Local.FileStorage.GetPublicUrl(Piranha.Models.Media,System.String)">
+            <summary>
+            Gets the public URL for the given media object.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <returns>The public url</returns>
+        </member>
+        <member name="M:Piranha.Local.FileStorage.GetResourceName(Piranha.Models.Media,System.String)">
+            <summary>
+            Gets the resource name for the given media object.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <returns>The public url</returns>
+        </member>
+        <member name="M:Piranha.Local.FileStorage.GetResourceName(Piranha.Models.Media,System.String,System.Boolean)">
+            <summary>
+            Gets the resource name for the given media object.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <param name="encode">If the filename should be URL encoded</param>
+            <returns>The public url</returns>
+        </member>
+        <member name="T:Piranha.Local.FileStorageModule">
+            <summary>
+            File Storage module.
+            </summary>
+        </member>
+        <member name="P:Piranha.Local.FileStorageModule.Author">
+            <summary>
+            Gets the Author
+            </summary>
+        </member>
+        <member name="P:Piranha.Local.FileStorageModule.Name">
+            <summary>
+            Gets the Name
+            </summary>
+        </member>
+        <member name="P:Piranha.Local.FileStorageModule.Version">
+            <summary>
+            Gets the Version
+            </summary>
+        </member>
+        <member name="P:Piranha.Local.FileStorageModule.Description">
+            <summary>
+            Gets the description
+            </summary>
+        </member>
+        <member name="P:Piranha.Local.FileStorageModule.PackageUrl">
+            <summary>
+            Gets the package url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Local.FileStorageModule.IconUrl">
+            <summary>
+            Gets the icon url.
+            </summary>
+        </member>
+        <member name="M:Piranha.Local.FileStorageModule.Init">
+            <summary>
+            Initializes the module.
+            </summary>
+        </member>
+        <member name="T:Piranha.Local.FileStorageNaming">
+            <summary>
+            How uploaded media files should be named to
+            ensure unique paths.
+            </summary>
+        </member>
+        <member name="M:Piranha.Local.FileStorageSession.#ctor(Piranha.Local.FileStorage,System.String,System.String,Piranha.Local.FileStorageNaming)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="storage">The main file storage</param>
+            <param name="basePath">The base path</param>
+            <param name="baseUrl">The base url</param>
+            <param name="naming">How uploaded media files should be named</param>
+        </member>
+        <member name="M:Piranha.Local.FileStorageSession.GetAsync(Piranha.Models.Media,System.String,System.IO.Stream)">
+            <summary>
+            Writes the content for the specified media content to the given stream.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <param name="stream">The output stream</param>
+            <returns>If the media was found</returns>
+        </member>
+        <member name="M:Piranha.Local.FileStorageSession.PutAsync(Piranha.Models.Media,System.String,System.String,System.IO.Stream)">
+            <summary>
+            Stores the given media content.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <param name="contentType">The content type</param>
+            <param name="stream">The input stream</param>
+            <returns>The public URL</returns>
+        </member>
+        <member name="M:Piranha.Local.FileStorageSession.PutAsync(Piranha.Models.Media,System.String,System.String,System.Byte[])">
+            <summary>
+            Stores the given media content.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <param name="contentType">The content type</param>
+            <param name="bytes">The binary data</param>
+            <returns>The public URL</returns>
+        </member>
+        <member name="M:Piranha.Local.FileStorageSession.DeleteAsync(Piranha.Models.Media,System.String)">
+            <summary>
+            Deletes the content for the specified media.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+        </member>
+        <member name="M:Piranha.Local.FileStorageSession.Dispose">
+            <summary>
+            Disposes the session.
+            </summary>
+        </member>
+        <member name="M:Piranha.Local.FileStorageSession.EnsureFolder(Piranha.Models.Media)">
+            <summary>
+            Makes sure the folder exists if unique folder names
+            are used.
+            </summary>
+            <param name="media">The media file</param>
+        </member>
+        <member name="M:FileStorageExtensions.AddPiranhaFileStorage(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String,Piranha.Local.FileStorageNaming,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Adds the services for the local FileStorage service.
+            </summary>
+            <param name="services">The current service collection</param>
+            <param name="basePath">The optional base path for where uploaded media is stored.null Default is wwwroot/uploads/</param>
+            <param name="baseUrl">The optional base url for accessing uploaded media. Default is ~/uploads/</param>
+            <param name="naming">How uploaded media files should be named</param>
+            <param name="scope">The optional service scope. Default is singleton</param>
+            <returns>The service collection</returns>
+        </member>
+        <member name="M:FileStorageStartupExtensions.UseFileStorage(Piranha.PiranhaServiceBuilder,System.String,System.String,Piranha.Local.FileStorageNaming,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Adds the FileStorage module if simple startup is used.
+            </summary>
+            <param name="serviceBuilder">The service builder</param>
+            <param name="basePath">The optional base path for where uploaded media is stored.null Default is wwwroot/uploads/</param>
+            <param name="baseUrl">The optional base url for accessing uploaded media. Default is ~/uploads/</param>
+            <param name="naming">How uploaded media files should be named</param>
+            <param name="scope">The optional service scope. Default is singleton</param>
+            <returns>The updated builder</returns>
+        </member>
+    </members>
+</doc>

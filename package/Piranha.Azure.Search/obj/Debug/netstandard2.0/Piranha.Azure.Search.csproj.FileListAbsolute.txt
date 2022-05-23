@@ -1,0 +1,15 @@
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\bin\Debug\netstandard2.0\Piranha.Azure.Search.deps.json
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\bin\Debug\netstandard2.0\Piranha.Azure.Search.dll
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\bin\Debug\netstandard2.0\Piranha.Azure.Search.pdb
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\bin\Debug\netstandard2.0\Piranha.Azure.Search.xml
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\bin\Debug\netstandard2.0\Piranha.dll
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\bin\Debug\netstandard2.0\Piranha.pdb
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\bin\Debug\netstandard2.0\Piranha.xml
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\obj\Debug\netstandard2.0\Piranha.Azure.Search.csprojAssemblyReference.cache
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\obj\Debug\netstandard2.0\Piranha.Azure.Search.AssemblyInfoInputs.cache
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\obj\Debug\netstandard2.0\Piranha.Azure.Search.AssemblyInfo.cs
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\obj\Debug\netstandard2.0\Piranha.Azure.Search.csproj.CopyComplete
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\obj\Debug\netstandard2.0\Piranha.Azure.Search.dll
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\obj\Debug\netstandard2.0\Piranha.Azure.Search.xml
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\obj\Debug\netstandard2.0\Piranha.Azure.Search.pdb
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.Search\obj\Debug\netstandard2.0\Piranha.Azure.Search.csproj.CoreCompileInputs.cache

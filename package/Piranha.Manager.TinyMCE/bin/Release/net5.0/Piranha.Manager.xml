@@ -1,0 +1,2676 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.Manager</name>
+    </assembly>
+    <members>
+        <member name="T:Piranha.Manager.Actions">
+            <summary>
+            Static class for defining the manager menu.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ModalActions.MediaPreview">
+            <summary>
+            Gets the available actions for the media preview modal.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Actions.ModalActions.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.AliasEdit">
+            <summary>
+            Gets the available actions for the alias view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.CommentList">
+            <summary>
+            Gets the available actions for the comments view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.ConfigEdit">
+            <summary>
+            Gets the available actions for the config view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.ContentList">
+            <summary>
+            Gets the available actions for the content list view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.ContentEdit">
+            <summary>
+            Gets the available actions for the content edit view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.MediaList">
+            <summary>
+            Gets the available actions for media list view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.ModuleList">
+            <summary>
+            Gets the available actions for the module list view.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.PageEdit">
+            <summary>
+            Gets the available actions for the page edit view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.PageList">
+            <summary>
+            Gets the actions available for the page list view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.ToolbarActions.PostEdit">
+            <summary>
+            Gets the available actions for the page edit view.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Actions.ToolbarActions.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.Modals">
+            <summary>
+            Gets the available modal actions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Actions.Toolbars">
+            <summary>
+            Gets/sets the available toolbar actions.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.AliasListModel">
+            <summary>
+            Alias model.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.AliasListModel.ListItem">
+            <summary>
+            A list item in the alias model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.ListItem.Id">
+            <summary>
+            Gets/sets the optional id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.ListItem.SiteId">
+            <summary>
+            Gets/sets the site id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.ListItem.AliasUrl">
+            <summary>
+            Gets/sets the alias url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.ListItem.RedirectUrl">
+            <summary>
+            Gets/sets the redirect url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.ListItem.IsPermanent">
+            <summary>
+            Gets/sets if the redirect should be permanent.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.SiteId">
+            <summary>
+            Gets/sets the current site id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.SiteTitle">
+            <summary>
+            Gets/sets the current site title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.Sites">
+            <summary>
+            Gets/sets the available sites.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.Items">
+            <summary>
+            Gets/set the available items.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AliasListModel.Status">
+            <summary>
+            Gets/sets the optional status message from the last operation.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AsyncResult`1.Body">
+            <summary>
+            Gets/sets the result body.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.AsyncResult">
+            <summary>
+            Result model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.AsyncResult.Status">
+            <summary>
+            Gets/sets the status message from the last operation.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.BlockListModel">
+            <summary>
+            Block list model.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.BlockListModel.ListCategory">
+            <summary>
+            A block category in the list.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.BlockListModel.ListCategory.Name">
+            <summary>
+            Gets/sets the name.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.BlockListModel.ListCategory.Items">
+            <summary>
+            Gets/sets the available block types for the category.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.BlockListModel.ListItem">
+            <summary>
+            A block type item in the list.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.BlockListModel.ListItem.Name">
+            <summary>
+            Gets/sets the name.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.BlockListModel.ListItem.Icon">
+            <summary>
+            Gets/sets the css icon.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.BlockListModel.ListItem.Type">
+            <summary>
+            Gets/sets the block type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.BlockListModel.Categories">
+            <summary>
+            Gets/sets the available block categories.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.BlockListModel.TypeCount">
+            <summary>
+            Gets/sets the total number of block types.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.CommentListModel.ContentId">
+            <summary>
+            Gets/sets the optionally select content id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.CommentListModel.Comments">
+            <summary>
+            Gets/sets the available comments.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.CommentListModel.Status">
+            <summary>
+            Gets/sets the optional status message from the last operation.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.ConfigModel">
+            <summary>
+            Config model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.LanguageId">
+            <summary>
+            Gets/sets the optional language id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.TypeId">
+            <summary>
+            Gets/sets the content type id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.TypeTitle">
+            <summary>
+            Gets/sets the content type title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.GroupId">
+            <summary>
+            Gets/sets the content type group id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.GroupTitle">
+            <summary>
+            Gets/sets the content type group title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.Title">
+            <summary>
+            Gets/sets the mandatory title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.PrimaryImage">
+            <summary>
+            Gets/sets the optional primary image.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.Excerpt">
+            <summary>
+            Gets/sets the optional excerpt.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.UseCategory">
+            <summary>
+            Gets/sets if the content type should be
+            categorized.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.UsePrimaryImage">
+            <summary>
+            Gets/sets if primary image should be used for the
+            content type. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.UseExcerpt">
+            <summary>
+            Gets/sets if excerpt should be used for the
+            content type. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.UseHtmlExcerpt">
+            <summary>
+            Gets/sets if excerpt should in HTML-format. The
+            default value is false.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.UseTags">
+            <summary>
+            Gets/sets if tags should be used for the content type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.UseTranslations">
+            <summary>
+            Gets/sets if the content should be translatable.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.State">
+            <summary>
+            Gets/sets the content status.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.Regions">
+            <summary>
+            Gets/sets the available regions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.Editors">
+            <summary>
+            Gets/sets the available custom editors.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ContentEditModel.Languages">
+            <summary>
+            Gets/sets the available languages.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.ContentListModel">
+            <summary>
+            Content list model.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.ContentState">
+            <summary>
+            The different states revision based content can have.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.BlockGenericModel">
+            <summary>
+            Generic edit model for blocks.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockGenericModel.Type">
+            <summary>
+            Gets/sets the type of the block group.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockGenericModel.IsActive">
+            <summary>
+            Gets/sets if the block should be active
+            part of a group.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockGenericModel.Model">
+            <summary>
+            Gets/sets the global fields.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.BlockGroupModel">
+            <summary>
+            Edit model for block groups.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockGroupModel.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockGroupModel.Type">
+            <summary>
+            Gets/sets the type of the block group.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockGroupModel.Items">
+            <summary>
+            Gets/sets the available child items in the group.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockGroupModel.Fields">
+            <summary>
+            Gets/sets the available global group fields.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.BlockItemModel">
+            <summary>
+            Edit model for block groups.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockItemModel.IsActive">
+            <summary>
+            Gets/sets if the block should be active
+            part of a group.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockItemModel.Model">
+            <summary>
+            Gets/sets the block model.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.BlockMeta">
+            <summary>
+            Meta information for blocks.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockMeta.IsGroup">
+            <summary>
+            Gets/sets if this is a block group.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockMeta.isCollapsed">
+            <summary>
+            Gets/sets if the block is collapsed.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockMeta.IsReadonly">
+            <summary>
+            Gets/sets if the block is readonly.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockMeta.ShowHeader">
+            <summary>
+            If the global header fields should be visible.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockMeta.Width">
+            <summary>
+            Gets/sets the editor width.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.BlockModel">
+            <summary>
+            Edit model for blocks.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.BlockModel.Meta">
+            <summary>
+            Gets/sets the meta information.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.ContentEditModel">
+            <summary>
+            Content edit model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentEditModel.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentEditModel.TypeId">
+            <summary>
+            Gets/sets the content type id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentEditModel.Title">
+            <summary>
+            Gets/sets the mandatory title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentEditModel.UseBlocks">
+            <summary>
+            Gets/sets if blocks should be used.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentEditModel.Blocks">
+            <summary>
+            Gets/sets the available blocks.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentEditModel.Regions">
+            <summary>
+            Gets/sets the available regions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentEditModel.Editors">
+            <summary>
+            Gets/sets the available custom editors.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.ContentMeta">
+            <summary>
+            Meta information for content.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentMeta.Uid">
+            <summary>
+            Gets/sets the unique client id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentMeta.Name">
+            <summary>
+            Gets/sets the type name.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentMeta.Title">
+            <summary>
+            Gets/sets the title if used in a list.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentMeta.Icon">
+            <summary>
+            Gets/sets the type icon.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentMeta.Description">
+            <summary>
+            Gets/sets the optional description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentMeta.Placeholder">
+            <summary>
+            Gets/sets the optional placeholder.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentMeta.Component">
+            <summary>
+            Gets/sets the client component.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentTypeModel.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentTypeModel.Title">
+            <summary>
+            Gets/sets the title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.ContentTypeModel.AddUrl">
+            <summary>
+            Gets/sets the url for adding a new content model for the type.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.EditorModel">
+            <summary>
+            Edit model for custom editors.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.EditorModel.Uid">
+            <summary>
+            Gets/sets the unique client id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.EditorModel.Component">
+            <summary>
+            Gets/sets the editor component.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.EditorModel.Icon">
+            <summary>
+            Gets/sets the optional icon css.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.EditorModel.Name">
+            <summary>
+            Gets/sets the name.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.FieldMeta">
+            <summary>
+            Meta information for fields.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.FieldMeta.Id">
+            <summary>
+            Gets/sets the id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.FieldMeta.IsHalfWidth">
+            <summary>
+            Gets/sets if the field should be displayed half width.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.FieldMeta.NotifyChange">
+            <summary>
+            Gets/sets if this field should notify parent on change.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.FieldMeta.Options">
+            <summary>
+            Gets/sets the field options
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.FieldMeta.Settings">
+            <summary>
+            Gets/sets the optional field settings.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.FieldModel">
+            <summary>
+            Edit model for a field.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.FieldModel.Model">
+            <summary>
+            Gets/sets the field model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.FieldModel.Meta">
+            <summary>
+            Gets/sets the meta information.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.RegionItemModel">
+            <summary>
+            Edit model for a region item.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionItemModel.Uid">
+            <summary>
+            Gets/sets the unique client id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionItemModel.Title">
+            <summary>
+            Gets/sets the title if used in a list.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionItemModel.IsNew">
+            <summary>
+            Gets/sets if the region is new (added)
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionItemModel.Fields">
+            <summary>
+            Gets/sets the available fields.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.RegionMeta">
+            <summary>
+            Meta information for regions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionMeta.Id">
+            <summary>
+            Gets/sets the id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionMeta.IsCollection">
+            <summary>
+            Gets/sets if  this is a collection region.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionMeta.Expanded">
+            <summary>
+            Gets/sets if the items in the collection should be expanded
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionMeta.Display">
+            <summary>
+            Gets/sets how the region should be display (content/hidden/setting).
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionMeta.Width">
+            <summary>
+            Gets/sets the editor width.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.Content.RegionModel">
+            <summary>
+            Edit model for a region.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionModel.Items">
+            <summary>
+            Gets/sets the available items. A region collection can have several items,
+            a regular region will only have one item in the collection.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.Content.RegionModel.Meta">
+            <summary>
+            Gets/sets the meta information.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.LanguageEditModel">
+            <summary>
+            Language modal edit model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.LanguageEditModel.Items">
+            <summary>
+            Gets/sets the available languages
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.MediaListModel">
+            <summary>
+            List model for the media view.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.MediaListModel.FolderItem">
+            <summary>
+            A folder item in the list view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.FolderItem.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.FolderItem.Name">
+            <summary>
+            Gets/sets the name.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.FolderItem.ItemCount">
+            <summary>
+            Gets/sets the item count in the folder.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.MediaListModel.MediaItem">
+            <summary>
+            A media item in the list view.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.FolderId">
+            <summary>
+            Gets/sets the optional folder id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.Type">
+            <summary>
+            Gets/sets the media type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.Filename">
+            <summary>
+            Gets/sets the filename of the uploaded media.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.ContentType">
+            <summary>
+            Gets/sets the content type of the uploaded media.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.Title">
+            <summary>
+            Gets/sets the optional title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.AltText">
+            <summary>
+            Gets/sets the optional alt text.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.Description">
+            <summary>
+            Gets/sets the optional description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.Properties">
+            <summary>
+            Gets/sets the optional properties.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.PublicUrl">
+            <summary>
+            Gets/sets the public url used to access the uploaded media.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.Size">
+            <summary>
+            Gets/sets the file size.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.Width">
+            <summary>
+            Gets/sets the optional width.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.Height">
+            <summary>
+            Gets/sets the optional height.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.AltVersionUrl">
+            <summary>
+            An optional version url for a different size when requested via the list api call on the MediaApiController. Only use when expecting this call.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.MediaItem.LastModified">
+            <summary>
+            Gets/sets the last modification date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.Folders">
+            <summary>
+            Gets/sets the available folders.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.Media">
+            <summary>
+            Gets/sets the available media items.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.CurrentFolderId">
+            <summary>
+            Gets/sets the optional folder id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.CurrentFolderName">
+            <summary>
+            Gets/sets the optinal folder name
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.ParentFolderId">
+            <summary>
+            Gets/sets the optional parent id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.CanDelete">
+            <summary>
+            Gets/sets if the current folder can be deleted.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.Status">
+            <summary>
+            Gets/sets the optional status message from the last operation.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.ViewMode">
+            <summary>
+            Gets/sets the recommended view mode for the folder.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.Structure">
+            <summary>
+            Gets/sets the media folder structure.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.CurrentFolderBreadcrumb">
+            <summary>
+            Gets/sets the media folder structure.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.RootCount">
+            <summary>
+            Gets/sets the amount of media files at root level.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaListModel.TotalCount">
+            <summary>
+            Gets/sets the total amount of media files.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.MediaUploadModel">
+            <summary>
+            Model for uploading a new media asset.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaUploadModel.Id">
+            <summary>
+            Gets/sets the optional id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaUploadModel.ParentId">
+            <summary>
+            Gets/sets the parent id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.MediaUploadModel.Uploads">
+            <summary>
+            Gets/sets the uploaded file.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Piranha.Manager.Models.ModuleListModel">
+            <summary>
+            Modules model.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.ModuleListModel.ListItem">
+            <summary>
+            A list item in the module model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.ModuleListModel.Items">
+            <summary>
+            Gets/set the available items.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.PageEditModel">
+            <summary>
+            Page edit model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.SiteId">
+            <summary>
+            Gets/sets the mandatory site id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.ParentId">
+            <summary>
+            Gets/sets the optional parent id. This determines the
+            hierarchical position of the page.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.OriginalId">
+            <summary>
+            Gets/sets the id of the original page if this is a copy.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.SortOrder">
+            <summary>
+            Gets/sets the sort order of the page in its
+            hierarchical position.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.NavigationTitle">
+            <summary>
+            Gets/sets the optional navigation title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.Slug">
+            <summary>
+            Gets/sets the unique slug.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.MetaTitle">
+            <summary>
+            Gets/sets the optional meta title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.MetaKeywords">
+            <summary>
+            Gets/sets the optional meta keywords.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.MetaDescription">
+            <summary>
+            Gets/sets the optional meta description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.MetaIndex">
+            <summary>
+            Gets/sets the meta index.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.MetaFollow">
+            <summary>
+            Gets/sets the meta follow.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.MetaPriority">
+            <summary>
+            Gets/sets the meta priority.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.OgTitle">
+            <summary>
+            Gets/sets the optional og title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.OgDescription">
+            <summary>
+            Gets/sets the optional og description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.OgImage">
+            <summary>
+            Gets/sets the optional og image.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.IsHidden">
+            <summary>
+            Gets/sets if the page should be hidden in the menu structure.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.Published">
+            <summary>
+            Gets/sets the published date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.PublishedTime">
+            <summary>
+            Gets/sets the published time.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.RedirectUrl">
+            <summary>
+            Gets/sets the optional redirect url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.RedirectType">
+            <summary>
+            Gets/sets the redirect type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.PrimaryImage">
+            <summary>
+            Gets/sets the optional primary image.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.Excerpt">
+            <summary>
+            Gets/sets the optional excerpt.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.EnableComments">
+            <summary>
+            Gets/sets if comments should be enabled.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.CloseCommentsAfterDays">
+            <summary>
+            Gets/sets after how many days after publish date comments
+            should be closed. A value of 0 means never.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.CommentCount">
+            <summary>
+            Gets/sets the total comment count.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.PendingCommentCount">
+            <summary>
+            Gets/sets the number of pending comments.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.State">
+            <summary>
+            Gets/sets the content status.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.IsCopy">
+            <summary>
+            Gets/sets if this is a copy.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.Routes">
+            <summary>
+            Gets/sets the available routes.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.SelectedRoute">
+            <summary>
+            Gets/sets the selected route.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.SelectedPermissions">
+            <summary>
+            Gets/sets the currently selected permissions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.Permissions">
+            <summary>
+            Gets/sets all of the available permissions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.UsePrimaryImage">
+            <summary>
+            Gets/sets if primary image should be used for the
+            post type. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.UseExcerpt">
+            <summary>
+            Gets/sets if excerpt should be used for the
+            post type. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PageEditModel.UseHtmlExcerpt">
+            <summary>
+            Gets/sets if excerpt should in HTML-format. The
+            default value is false.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.PageListModel">
+            <summary>
+            Page list model.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.PostEditModel">
+            <summary>
+            Page edit model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.BlogId">
+            <summary>
+            Gets/sets the mandatory blog id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.PrimaryImage">
+            <summary>
+            Gets/sets the optional primary image.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.Slug">
+            <summary>
+            Gets/sets the unique slug.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.MetaTitle">
+            <summary>
+            Gets/sets the optional meta title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.MetaKeywords">
+            <summary>
+            Gets/sets the optional meta keywords.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.MetaDescription">
+            <summary>
+            Gets/sets the optional meta description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.MetaIndex">
+            <summary>
+            Gets/sets the meta index.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.MetaFollow">
+            <summary>
+            Gets/sets the meta follow.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.MetaPriority">
+            <summary>
+            Gets/sets the meta priority.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.OgTitle">
+            <summary>
+            Gets/sets the optional og title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.OgDescription">
+            <summary>
+            Gets/sets the optional og description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.OgImage">
+            <summary>
+            Gets/sets the optional og image.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.Excerpt">
+            <summary>
+            Gets/sets the optional excerpt.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.Published">
+            <summary>
+            Gets/sets the published date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.RedirectUrl">
+            <summary>
+            Gets/sets the optional redirect url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.RedirectType">
+            <summary>
+            Gets/sets the redirect type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.EnableComments">
+            <summary>
+            Gets/sets if comments should be enabled.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.CloseCommentsAfterDays">
+            <summary>
+            Gets/sets after how many days after publish date comments
+            should be closed. A value of 0 means never.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.CommentCount">
+            <summary>
+            Gets/sets the total comment count.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.PendingCommentCount">
+            <summary>
+            Gets/sets the number of pending comments.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.State">
+            <summary>
+            Gets/sets the content status.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.SelectedCategory">
+            <summary>
+            Gets/sets the selected category.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.SelectedTags">
+            <summary>
+            Gets/sets the selected tags.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.Categories">
+            <summary>
+            Gets/sets the available categories.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.Tags">
+            <summary>
+            Gets/sets the available tags.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.Routes">
+            <summary>
+            Gets/sets the available routes.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.SelectedRoute">
+            <summary>
+            Gets/sets the selected route.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.SelectedPermissions">
+            <summary>
+            Gets/sets the currently selected permissions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.Permissions">
+            <summary>
+            Gets/sets all of the available permissions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.UsePrimaryImage">
+            <summary>
+            Gets/sets if primary image should be used for the
+            post type. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.UseExcerpt">
+            <summary>
+            Gets/sets if excerpt should be used for the
+            post type. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.PostEditModel.UseHtmlExcerpt">
+            <summary>
+            Gets/sets if excerpt should in HTML-format. The
+            default value is false.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.SiteContentEditModel">
+            <summary>
+            Page edit model.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.SiteEditModel">
+            <summary>
+            Site model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteEditModel.LanguageId">
+            <summary>
+            Gets/sets the selected language id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteEditModel.InternalId">
+            <summary>
+            Gets/sets the internal textual id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteEditModel.Description">
+            <summary>
+            Gets/sets the optional description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteEditModel.Logo">
+            <summary>
+            Gets/sets the optional site logo.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteEditModel.Hostnames">
+            <summary>
+            Gets/sets the optional hostnames to bind this site for.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteEditModel.IsDefault">
+            <summary>
+            Gets/sets if this is the default site.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteEditModel.Culture">
+            <summary>
+            Gets/sets the optional culture for the site.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteEditModel.SiteTypes">
+            <summary>
+            Gets/sets the available site types.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteEditModel.Languages">
+            <summary>
+            Gets/sets the available languages.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Models.SiteEditModel.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.SiteListModel">
+            <summary>
+            Site list model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteListModel.SiteId">
+            <summary>
+            Gets/sets the currently selected site id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteListModel.SiteTitle">
+            <summary>
+            Gets/sets the title of the currently selected site.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteListModel.Sites">
+            <summary>
+            Gets/sets the available sites.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.SiteListModel.Items">
+            <summary>
+            Gets/sets the items in the currently selected site.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Models.StatusMessage">
+            <summary>
+            Status message to pass from an api to the manager interface.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.StatusMessage.Type">
+            <summary>
+            Gets/sets the message type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.StatusMessage.Body">
+            <summary>
+            Gets/sets the message body.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.StatusMessage.Hide">
+            <summary>
+            Gets/sets if the status message should be hidden
+            automatically from the notification hub after a
+            period of time.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.StructureModel.StructureItem.Id">
+            <summary>
+            Gets/sets the unique page id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.StructureModel.StructureItem.Children">
+            <summary>
+            Gets/sets the available children.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Models.StructureModel.StructureItem.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.StructureModel.Id">
+            <summary>
+            The id of the item to move.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Models.StructureModel.Items">
+            <summary>
+            Gets/sets the structure items.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.AliasApiController">
+            <summary>
+            Api controller for alias management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.AliasApiController.#ctor(Piranha.IApi,Piranha.Manager.Services.AliasService,Piranha.Manager.ManagerLocalizer)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.AliasApiController.List(System.Nullable{System.Guid})">
+            <summary>
+            Gets the list model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.AliasApiController.Save(Piranha.Manager.Models.AliasListModel.ListItem)">
+            <summary>
+            Saves the given alias and returns the updated list model.
+            </summary>
+            <param name="model">The alias</param>
+            <returns>The updated list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.AliasApiController.Delete(System.Guid)">
+            <summary>
+            Deletes the alias with the given id and returns the updated
+            list model.
+            </summary>
+            <param name="id">The alias id</param>
+            <returns>The updated list model</returns>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.CommentApiController">
+            <summary>
+            Api controller for alias management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.CommentApiController.#ctor(Piranha.Manager.Services.CommentService,Piranha.Manager.ManagerLocalizer)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.CommentApiController.List(System.Nullable{System.Guid})">
+            <summary>
+            Gets the list model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.ConfigApiController">
+            <summary>
+            Api controller for alias management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ConfigApiController.#ctor(Piranha.Manager.Services.ConfigService)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ConfigApiController.List">
+            <summary>
+            Gets the list model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ConfigApiController.Save(Piranha.Manager.Models.ConfigModel)">
+            <summary>
+            Save the given model.
+            </summary>
+            <param name="model">The config model</param>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.ContentApiController">
+            <summary>
+            Api controller for content management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.#ctor(Piranha.Manager.Services.ContentService,Piranha.Manager.Services.ContentTypeService,Piranha.IApi)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.GetBlockTypesForPage(System.String,System.String)">
+            <summary>
+            Gets the currently available block types for the
+            specified page type.
+            </summary>
+            <param name="pageType">The page type id</param>
+            <param name="parentType">The optional parent group type</param>
+            <returns>The block list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.GetBlockTypesForPost(System.String,System.String)">
+            <summary>
+            Gets the currently available block types for the
+            specified post type.
+            </summary>
+            <param name="postType">The post type id</param>
+            <param name="parentType">The optional parent group type</param>
+            <returns>The block list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.GetBlockTypes(System.String)">
+            <summary>
+            Gets the currently available block types.
+            </summary>
+            <param name="parentType">The optional parent group type</param>
+            <returns>The block list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.CreateBlockAsync(System.String)">
+            <summary>
+            Creates a new block of the specified type.
+            </summary>
+            <param name="type">The block type</param>
+            <returns>The new block</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.CreateRegionAsync(System.String,System.String,System.String)">
+            <summary>
+            Creates a new region for the specified content type.
+            </summary>
+            <param name="content">The type of content</param>
+            <param name="type">The content type</param>
+            <param name="region">The region id</param>
+            <returns>The new region model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.Get(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            Gets the post with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <param name="languageId">The optional language id</param>
+            <returns>The post edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.GetInfo(System.Guid)">
+            <summary>
+            Gets the info model for the content with the
+            given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The content info model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.Create(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="contentType">The content type</param>
+             <returns>The edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.Save(Piranha.Manager.Models.ContentEditModel)">
+            <summary>
+            Saves the given model
+            </summary>
+            <param name="model">The model</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ContentApiController.Delete(System.Guid)">
+            <summary>
+            Deletes the content with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.LanguageApiController">
+            <summary>
+            Api controller for alias management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.LanguageApiController.#ctor(Piranha.Manager.Services.LanguageService,Piranha.Manager.ManagerLocalizer)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.LanguageApiController.Get">
+            <summary>
+            Gets the edit model.
+            </summary>
+            <returns>The edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.LanguageApiController.Save(Piranha.Manager.Models.LanguageEditModel)">
+            <summary>
+            Saves the edit model.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.ManagerController">
+            <summary>
+            Base mvc controller for the manager interface.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ManagerController.SuccessMessage(System.String,System.Boolean)">
+            <summary>
+            Adds a success message to the current view.
+            </summary>
+            <param name="msg">The message</param>
+            <param name="persist">If the message should be persisted in TempData</param>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ManagerController.ErrorMessage(System.String,System.Boolean)">
+            <summary>
+            Adds an error message to the current view.
+            </summary>
+            <param name="msg"></param>
+            <param name="persist">If the message should be persisted in TempData</param>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ManagerController.InformationMessage(System.String,System.Boolean)">
+            <summary>
+            Adds an information message to the current view.
+            </summary>
+            <param name="msg"></param>
+            <param name="persist">If the message should be persisted in TempData</param>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.MediaApiController">
+            <summary>
+            Api controller for alias management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.MediaApiController.Get(System.Guid)">
+            <summary>
+            Gets single media
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.MediaApiController.GetUrl(System.Guid,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets the image url for the specified dimensions.
+            </summary>
+            <param name="id">The unqie id</param>
+            <param name="width">The optional width</param>
+            <param name="height">The optional height</param>
+            <returns>The public url</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.MediaApiController.List(System.Nullable{System.Guid},System.Nullable{Piranha.Models.MediaType},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets the list model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.MediaApiController.SaveMeta(Piranha.Manager.Models.MediaListModel.MediaItem)">
+            <summary>
+            Saves the meta information for the given media asset.
+            </summary>
+            <param name="model">The media model</param>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.MediaApiController.Upload(Piranha.Manager.Models.MediaUploadModel)">
+            <summary>
+            Adds a new media upload.
+            </summary>
+            <param name="model">The upload model</param>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.ModuleApiController">
+            <summary>
+            Api controller for alias management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ModuleApiController.#ctor(Piranha.Manager.Services.ModuleService)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.ModuleApiController.List">
+            <summary>
+            Gets the list model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.PageApiController">
+            <summary>
+            Api controller for page management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.#ctor(Piranha.Manager.Services.PageService,Piranha.IApi,Piranha.Manager.ManagerLocalizer,Microsoft.AspNetCore.SignalR.IHubContext{Piranha.Manager.Hubs.PreviewHub},Microsoft.AspNetCore.Authorization.IAuthorizationService)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.List">
+            <summary>
+            Gets the list model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.Sitemap(System.Nullable{System.Guid})">
+            <summary>
+            Gets the sitemap model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.Get(System.Guid)">
+            <summary>
+            Gets the page with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The page edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.GetInfo(System.Guid)">
+            <summary>
+            Gets the info model for the page with the
+            given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The page info model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.Create(System.Guid,System.String)">
+            <summary>
+            Creates a new page of the specified type.
+            </summary>
+            <param name="siteId">The site id</param>
+            <param name="typeId">The type id</param>
+            <returns>The page edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.CreateRelative(System.Guid,System.String,System.Boolean)">
+            <summary>
+            Creates a new page of the specified type.
+            </summary>
+            <param name="pageId">The page the new page should be position relative to</param>
+            <param name="typeId">The type id</param>
+            <param name="after">If the new page should be positioned after the existing page</param>
+            <returns>The page edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.CopyRelative(System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            Creates a new page of the specified type.
+            </summary>
+            <param name="sourceId">The page that should be copied</param>
+            <param name="pageId">The page the new page should be position relative to</param>
+            <param name="after">If the new page should be positioned after the existing page</param>
+            <returns>The page edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.Detach(System.Guid)">
+            <summary>
+            Detaches the given copy into a unique page instance.
+            </summary>
+            <param name="pageId">The page id</param>
+            <returns>The page edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.Save(Piranha.Manager.Models.PageEditModel)">
+            <summary>
+            Saves the given model
+            </summary>
+            <param name="model">The model</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.SaveDraft(Piranha.Manager.Models.PageEditModel)">
+            <summary>
+            Saves the given model
+            </summary>
+            <param name="model">The model</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.SaveUnpublish(Piranha.Manager.Models.PageEditModel)">
+            <summary>
+            Saves the given model and unpublishes it
+            </summary>
+            <param name="model">The model</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.Delete(System.Guid)">
+            <summary>
+            Deletes the page with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PageApiController.Save(Piranha.Manager.Models.PageEditModel,System.Boolean)">
+            <summary>
+            Saves the given model
+            </summary>
+            <param name="model">The model</param>
+            <param name="draft">If the page should be saved as a draft</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.PermissionApiController">
+            <summary>
+            Api controller for getting user permissions.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PermissionApiController.#ctor(Microsoft.AspNetCore.Authorization.IAuthorizationService)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.PostApiController">
+            <summary>
+            Api controller for page management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.#ctor(Piranha.Manager.Services.PostService,Piranha.IApi,Piranha.Manager.ManagerLocalizer,Microsoft.AspNetCore.SignalR.IHubContext{Piranha.Manager.Hubs.PreviewHub})">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.List(System.Guid,System.Int32)">
+            <summary>
+            Gets the list model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.Get(System.Guid)">
+            <summary>
+            Gets the post with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The post edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.GetInfo(System.Guid)">
+            <summary>
+            Gets the info model for the post with the
+            given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The post info model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.Create(System.Guid,System.String)">
+            <summary>
+            Creates a new post of the specified type.
+            </summary>
+            <param name="archiveId">The archive id</param>
+            <param name="typeId">The type id</param>
+            <returns>The page edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.Save(Piranha.Manager.Models.PostEditModel)">
+            <summary>
+            Saves the given model
+            </summary>
+            <param name="model">The model</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.SaveDraft(Piranha.Manager.Models.PostEditModel)">
+            <summary>
+            Saves the given model
+            </summary>
+            <param name="model">The model</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.SaveUnpublish(Piranha.Manager.Models.PostEditModel)">
+            <summary>
+            Saves the given model and unpublishes it
+            </summary>
+            <param name="model">The model</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.Delete(System.Guid)">
+            <summary>
+            Deletes the post with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.PostApiController.Save(Piranha.Manager.Models.PostEditModel,System.Boolean)">
+            <summary>
+            Saves the given model
+            </summary>
+            <param name="model">The model</param>
+            <param name="draft">If the page should be saved as a draft</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="T:Piranha.Manager.Controllers.SiteApiController">
+            <summary>
+            Api controller for site management.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.SiteApiController.#ctor(Piranha.Manager.Services.SiteService,Piranha.Manager.ManagerLocalizer)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.SiteApiController.Get(System.Guid)">
+            <summary>
+            Gets the site with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The page edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.SiteApiController.GetContent(System.Guid)">
+            <summary>
+            Gets the site content with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The page edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.SiteApiController.Create">
+            <summary>
+            Creates a new site.
+            </summary>
+            <returns>The site edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.SiteApiController.Save(Piranha.Manager.Models.SiteEditModel)">
+            <summary>
+            Gets the site with the given id.
+            </summary>
+            <param name="model">The site model</param>
+            <returns>The status of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.SiteApiController.SaveContent(Piranha.Manager.Models.SiteContentEditModel)">
+            <summary>
+            Gets the site with the given id.
+            </summary>
+            <param name="model">The site model</param>
+            <returns>The status of the operation</returns>
+        </member>
+        <member name="M:Piranha.Manager.Controllers.SiteApiController.Delete(System.Guid)">
+            <summary>
+            Deletes the site with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The result of the operation</returns>
+        </member>
+        <member name="T:Piranha.Manager.Editor.EditorConfig">
+            <summary>
+            Static class for configuring the Tiny MCE editor.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorConfig.Current">
+            <summary>
+            Gets/sets the current editor config.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorConfig.Plugins">
+            <summary>
+            Gets/sets the configured editor plugins.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorConfig.Toolbar">
+            <summary>
+            Gets/sets the configured editor toolbar.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorConfig.ExtendedValidElements">
+            <summary>
+            Gets/sets the extra valid html elements for the editor.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorConfig.BlockFormats">
+            <summary>
+            Gets/sets the configured block formats.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorConfig.StyleFormats">
+            <summary>
+            Gets/sets the configured editor styles.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Editor.EditorConfig.FromFile(System.String)">
+            <summary>
+            Configures the editor from the given json file.
+            </summary>
+            <param name="path">The path to the file.</param>
+        </member>
+        <member name="T:Piranha.Manager.Editor.EditorScripts">
+            <summary>
+            Static class for configuring the HTML Editor scripts.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Editor.EditorStyle">
+            <summary>
+            A editor style item.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorStyle.Title">
+            <summary>
+            Gets/sets the display title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorStyle.Tag">
+            <summary>
+            Gets/sets the tag the style should apply for.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorStyle.Type">
+            <summary>
+            Gets/sets the element type of the tag.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Editor.EditorStyle.Classes">
+            <summary>
+            Gets/sets the optional css classes that should be applied.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Editor.EditorStyleType">
+            <summary>
+            The different types of elements that can be styled.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Extend.ActionList`1.Remove(System.String)">
+            <summary>
+            Removes the item with the given internal id.
+            </summary>
+            <param name="internalId">The internal id</param>
+        </member>
+        <member name="P:Piranha.Manager.Extend.IAction.InternalId">
+            <summary>
+            Gets/sets the internal id of the action.
+            </summary>
+        </member>
+        <member name="F:Piranha.Manager.Extend.ModalAction._script">
+            <summary>
+            The private optional script definition.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Extend.ModalAction.Uid">
+            <summary>
+            Gets/sets the unique client id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Extend.ModalAction.InternalId">
+            <summary>
+            Gets/sets the internal id of the action.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Extend.ModalAction.Title">
+            <summary>
+            Gets/sets the display title for the modal tab.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Extend.ModalAction.Css">
+            <summary>
+            Gets/sets the icon css class for the modal tab.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Extend.ModalAction.Component">
+            <summary>
+            Gets/sets the name of the global Vue component.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Extend.ModalAction.ComponentScript">
+            <summary>
+            Gets/sets the optional script for the global Vue component.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Extend.ToolbarAction.InternalId">
+            <summary>
+            Gets/sets the internal id of the action.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Extend.ToolbarAction.ActionView">
+            <summary>
+            Gets/sets the name of the view that should be inserted
+            into the action bar for the page.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Extend.ToolbarAction.PartialView">
+            <summary>
+            Gets/sets the name of the optional partial view that
+            should be inserted at the bottom of the page.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Hubs.PreviewHub">
+            <summary>
+            The SingalR Hub responsible for preview.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.ManagerScriptDefinition">
+            <summary>
+            Defines custom script resources with sources, hashes, and other future features as needed.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerScriptDefinition.Src">
+            <summary>
+            The script source.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerScriptDefinition.Integrity">
+            <summary>
+            The file hash.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerScriptDefinition.CrossOriginValue">
+            <summary>
+            If true, set crossorigin to "use-credentials". Otherwise, set to "anonymous".
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerScriptDefinition.Type">
+            <summary>
+            The script type.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.ManagerScriptDefinition.GetHashCode">
+            <summary>
+            Get the hash code for this script.
+            </summary>
+            <remarks>The integrity hash will still be unique to the file, even moreso than the address. If the same file gets loaded with SRI hashes from two different sources they'll still be labeled the same file.</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Manager.ManagerScriptDefinition.ToString">
+            <summary>
+            WARNING: DO NOT USE THIS VALUE FOR INJECTING INTO A PAGE. IT IS NOT SANITIZED. IT SHOULD ONLY BE USED FOR TESTING OR DISPLAY PURPOSES ONLY.
+            Returns a text string of what a rendered script tag for this script would look like.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Manager.ManagerScriptDefinition.op_Implicit(System.String)~Piranha.Manager.ManagerScriptDefinition">
+            <summary>
+            Backwards compatibility for the original string list.
+            </summary>
+            <param name="src"></param>
+        </member>
+        <member name="M:Piranha.Manager.ManagerScriptDefinition.op_Implicit(System.ValueTuple{System.String,System.String})~Piranha.Manager.ManagerScriptDefinition">
+            <summary>
+            Enables KVP-like list insertion.
+            </summary>
+            <param name="valTup"></param>
+        </member>
+        <member name="T:Piranha.Manager.Menu">
+            <summary>
+            Static class for defining the manager menu.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Menu.Items">
+            <summary>
+            The basic manager menu.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.MenuExtensions.GetForUser(Piranha.Manager.MenuItemList,System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authorization.IAuthorizationService)">
+            <summary>
+            Gets the applicable menu structure for the given user.
+            </summary>
+            <param name="items">The menu items to filter</param>
+            <param name="user">The user</param>
+            <param name="auth">The authorization service</param>
+            <returns></returns>
+        </member>
+        <member name="T:Piranha.Manager.MenuItem">
+            <summary>
+            An item in the manager menu.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.MenuItem.InternalId">
+            <summary>
+            Gets/sets the internal id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.MenuItem.Name">
+            <summary>
+            Gets/sets the display name.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.MenuItem.Css">
+            <summary>
+            Gets/sets the optional css class.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.MenuItem.Route">
+            <summary>
+            Gets/sets the route for the menu item.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.MenuItem.Policy">
+            <summary>
+            Gets/sets the policy needed to see this item.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.MenuItem.Params">
+            <summary>
+            Gets/sets the optional menu item params.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.MenuItem.Items">
+            <summary>
+            Gets/sets the available items.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.MenuItemList.Item(System.String)">
+            <summary>
+            Gets the menu item with the given internal id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.Scripts">
+            <summary>
+            The currently registered custom scripts.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.Styles">
+            <summary>
+            The currently registered custom styles.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.Partials">
+            <summary>
+            The currently registrered partial views.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.EditorInitScriptUrl">
+            <summary>
+            Gets/sets the url to the currently registered editor init script.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.PreviewSizes">
+            <summary>
+            The currently registered preview sizes.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.Author">
+            <summary>
+            Gets the Author
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.Name">
+            <summary>
+            Gets the Name
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.Version">
+            <summary>
+            Gets the Version
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.Description">
+            <summary>
+            Gets the description
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.PackageUrl">
+            <summary>
+            Gets the package url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Module.IconUrl">
+            <summary>
+            Gets the icon url.
+            </summary>
+        </member>
+        <member name="F:Piranha.Manager.Module.Assembly">
+            <summary>
+            The assembly.
+            </summary>
+        </member>
+        <member name="F:Piranha.Manager.Module.LastModified">
+            <summary>
+            Last modification date of the assembly.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Module.#cctor">
+            <summary>
+            Static initialization.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Module.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Module.Init">
+            <summary>
+            Initializes the module.
+            </summary>
+        </member>
+        <member name="T:Piranha.Manager.Permission">
+            <summary>
+            The available manager permissions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.PreviewSize.Title">
+            <summary>
+            Gets/sets the display title of the size.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.PreviewSize.Width">
+            <summary>
+            Gets/sets the width.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.PreviewSize.IconCss">
+            <summary>
+            Gets/sets the display icon css class.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Services.AliasService.#ctor(Piranha.IApi)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.AliasService.GetList(System.Nullable{System.Guid})">
+            <summary>
+            Gets the list model for the specified site. If no site is
+            specified the default site is used.
+            </summary>
+            <param name="siteId">The optional site id</param>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.AliasService.Save(Piranha.Manager.Models.AliasListModel.ListItem)">
+            <summary>
+            Saves the given alias.
+            </summary>
+            <param name="model">The alias</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.AliasService.Delete(System.Guid)">
+            <summary>
+            Deletes the alias with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The deleted alias</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.CommentService.#ctor(Piranha.IApi)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.CommentService.Get(System.Nullable{System.Guid})">
+            <summary>
+            Gets the comment model.
+            </summary>
+            <param name="id">The optional content id</param>
+            <returns>The model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ConfigService.#ctor(Piranha.IApi)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.ConfigService.Get">
+            <summary>
+            Gets the config model.
+            </summary>
+            <returns>The model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ConfigService.Save(Piranha.Manager.Models.ConfigModel)">
+            <summary>
+            Saves the given config model to the database.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentService.#ctor(Piranha.IApi,Piranha.Services.IContentFactory)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="factory">The content factory</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentService.GetListAsync(System.String)">
+            <summary>
+            Gets the list model.
+            </summary>
+            <param name="contentGroup">Name of the content group</param>
+            <returns>Gets the list model.</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentService.GetByIdAsync(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            Get the content edit model by contnet id
+            </summary>
+            <param name="id">The content id</param>
+            <param name="languageId">The optional language id</param>
+            <returns>Edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentService.CreateAsync(System.String)">
+            <summary>
+            Create new content based on content type id
+            </summary>
+            <param name="typeId">Content type id</param>
+            <returns>Nee edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentService.SaveAsync(Piranha.Manager.Models.ContentEditModel)">
+            <summary>
+            Save content
+            </summary>
+            <param name="model">The edit model</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentService.DeleteAsync(System.Guid)">
+            <summary>
+            Deletes the content with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentService.Transform(Piranha.Models.DynamicContent)">
+            <summary>
+            Transform content to a edit model.
+            </summary>
+            <param name="content">The dynamic content object</param>
+            <returns>Edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.#ctor(Piranha.IApi,Piranha.Services.IContentFactory)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="factory">The content factory</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.GetPageBlockTypes(System.String,System.String)">
+            <summary>
+            Gets the currently available block types for the
+            specified page type.
+            </summary>
+            <param name="pageType">The page type id</param>
+            <param name="parentType">The optional parent group type</param>
+            <returns>The block list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.GetPostBlockTypes(System.String,System.String)">
+            <summary>
+            Gets the currently available block types for the
+            specified post type.
+            </summary>
+            <param name="postType">The post type id</param>
+            <param name="parentType">The optional parent group type</param>
+            <returns>The block list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.GetBlockTypes(System.String)">
+            <summary>
+            Gets the currently available block types.
+            </summary>
+            <param name="parentType">The optional parent group type</param>
+            <returns>The block list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.CreateContentRegionAsync(System.String,System.String)">
+            <summary>
+            Creates a new content region.
+            </summary>
+            <param name="type">The type id</param>
+            <param name="region">The region id</param>
+            <returns>The new region item</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.CreatePageRegionAsync(System.String,System.String)">
+            <summary>
+            Creates a new page region.
+            </summary>
+            <param name="type">The type id</param>
+            <param name="region">The region id</param>
+            <returns>The new region item</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.CreatePostRegionAsync(System.String,System.String)">
+            <summary>
+            Creates a new post region.
+            </summary>
+            <param name="type">The type id</param>
+            <param name="region">The region id</param>
+            <returns>The new region item</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.CreateSiteRegionAsync(System.String,System.String)">
+            <summary>
+            Creates a new site region.
+            </summary>
+            <param name="type">The type id</param>
+            <param name="region">The region id</param>
+            <returns>The new region item</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.CreateRegionAsync(Piranha.Models.ContentTypeBase,System.String)">
+            <summary>
+            Creates a new region for the given content type.
+            </summary>
+            <param name="type">The content type</param>
+            <param name="region">The region id</param>
+            <returns>The new region item</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.CreateBlockAsync(System.String)">
+            <summary>
+            Creates a new block of the specified type.
+            </summary>
+            <param name="type">The block type</param>
+            <returns>The new block</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentTypeService.PopulateFieldOptions(Piranha.Runtime.AppField,Piranha.Manager.Models.Content.FieldModel)">
+            <summary>
+            Adds options to field's meta if required
+            </summary>
+            <param name="fieldType">Type of field</param>
+            <param name="fieldModel">Field model</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.ContentUtils.GetBlockFields(Piranha.Extend.Block)">
+            <summary>
+            Gets the fields for the given block.
+            </summary>
+            <param name="block">The block</param>
+            <returns>The available fields</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.LanguageService.#ctor(Piranha.IApi)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.LanguageService.Get">
+            <summary>
+            Gets the edit model for the language modal.
+            </summary>
+            <returns>The edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.LanguageService.Save(Piranha.Models.Language)">
+            <summary>
+            Saves the given language and returns the updated edit model.
+            </summary>
+            <param name="model">The language model</param>
+            <returns>The updated data</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.LanguageService.Delete(System.Guid)">
+            <summary>
+            Deletes the given language and returns the updated edit model.
+            </summary>
+            <param name="id">The id of the language to delete</param>
+            <returns>The updated data</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.LanguageService.Save(Piranha.Manager.Models.LanguageEditModel)">
+            <summary>
+            Saves the given edit model and returns the updated data.
+            </summary>
+            <param name="model">The edit model</param>
+            <returns>The updated data</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.MediaService.#ctor(Piranha.IApi)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The default api</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.MediaService.GetById(System.Guid)">
+            <summary>
+            Get media model by media id
+            </summary>
+            <param name="id">Media id</param>
+            <returns>Model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.MediaService.GetFolderBreadCrumb(Piranha.Models.MediaStructure,System.Nullable{System.Guid})">
+            <summary>
+            Gets the breadcrumb list of the folders from the selected folder id
+            </summary>
+            <param name="structure">The complete media folder structure</param>
+            <param name="folderId">The folder id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.MediaService.GetFolderBreadCrumbReversed(Piranha.Models.MediaStructure,System.Nullable{System.Guid})">
+            <summary>
+            Gets the breadcrumb list of the folders from the selected folder id in reverse order with child first in list
+            </summary>
+            <param name="structure">The complete media folder structure</param>
+            <param name="folderId">The folder id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.MediaService.GetList(System.Nullable{System.Guid},System.Nullable{Piranha.Models.MediaType},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets the list model for the specified folder, or the root
+            folder if no folder id is given.
+            </summary>
+            <param name="folderId">The optional folder id</param>
+            <param name="filter">The optional content type filter</param>
+            <param name="width">The optional width for images</param>
+            <param name="height">The optional height for images</param>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.MediaService.SaveMedia(Piranha.Manager.Models.MediaUploadModel)">
+            <summary>
+            Save or update media assets to storage
+            </summary>
+            <param name="model">Upload model</param>
+            <returns>The number of upload managed to be saved or updated</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.MediaService.SaveMeta(Piranha.Manager.Models.MediaListModel.MediaItem)">
+            <summary>
+            Saves the updated meta information for the given media asset.
+            </summary>
+            <param name="media">The media asset</param>
+            <returns>If the meta information was updated successful</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.ModuleService.GetList">
+            <summary>
+            Gets the list model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.PageService.#ctor(Piranha.IApi,Piranha.Services.IContentFactory,Piranha.Manager.ManagerLocalizer)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="factory">The content factory</param>
+            <param name="localizer">The manager localizer</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.PageService.GetList">
+            <summary>
+            Gets the list model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.PageService.GetPageStructure(System.Guid)">
+            <summary>
+            Gets the hierachical page structure for the specified site.
+            </summary>
+            <param name="siteId">The site id</param>
+            <returns>The structure</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.PageService.GetSiteList(System.Guid)">
+            <summary>
+            Gets the site list with the page structure of the selected site for
+            the page picker.
+            </summary>
+            <param name="siteId">The current site</param>
+            <returns>The model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.PageService.GetSitemap(System.Nullable{System.Guid})">
+            <summary>
+            Gets the sitemap model.
+            </summary>
+            <returns>The list model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.PageService.Delete(System.Guid)">
+            <summary>
+            Deletes the page with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.PageService.MovePages(Piranha.Manager.Models.StructureModel)">
+            <summary>
+            Updates the sitemap according to the given structure. Please note
+            that only the first page that has changed position is moved.
+            </summary>
+            <param name="structure">The page structure</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.PostService.Delete(System.Guid)">
+            <summary>
+            Deletes the post with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.SiteService.#ctor(Piranha.IApi,Piranha.Services.IContentFactory)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="factory">The content factory</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.SiteService.GetById(System.Guid)">
+            <summary>
+            Gets the edit model for the site with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.SiteService.GetContentById(System.Guid)">
+            <summary>
+            Gets the content edit model for the site with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.SiteService.Create">
+            <summary>
+            Creates a new site edit model.
+            </summary>
+            <returns>The edit model</returns>
+        </member>
+        <member name="M:Piranha.Manager.Services.SiteService.Save(Piranha.Manager.Models.SiteEditModel)">
+            <summary>
+            Saves the given site.
+            </summary>
+            <param name="model">The site edit model</param>
+        </member>
+        <member name="M:Piranha.Manager.Services.SiteService.Delete(System.Guid)">
+            <summary>
+            Deletes the site with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:ManagerModuleExtensions.AddPiranhaManager(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the Piranha manager module.
+            </summary>
+            <param name="services">The current service collection</param>
+            <returns>The services</returns>
+        </member>
+        <member name="M:ManagerModuleExtensions.UsePiranhaManager(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Uses the Piranha Manager.
+            </summary>
+            <param name="builder">The application builder</param>
+            <returns>The builder</returns>
+        </member>
+        <member name="M:ManagerModuleExtensions.MapPiranhaManager(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)">
+            <summary>
+            Adds the mappings needed for the Piranha Manager to
+            the endpoint routes.
+            </summary>
+            <param name="builder">The route builder</param>
+        </member>
+        <member name="M:ManagerModuleExtensions.Manager(Piranha.Runtime.AppModuleList)">
+            <summary>
+            Static accessor to Manager module if it is registered in the Piranha
+            application.
+            </summary>
+            <param name="modules">The available modules</param>
+            <returns>The manager module</returns>
+        </member>
+        <member name="M:ManagerStartupExtensions.UseManager(Piranha.PiranhaServiceBuilder,System.Action{Microsoft.AspNetCore.Mvc.MvcNewtonsoftJsonOptions})">
+            <summary>
+            Uses the Piranha Manager services if simple startup is used.
+            </summary>
+            <param name="serviceBuilder">The service builder</param>
+            <param name="jsonOptions">Optional JSON options</param>
+            <returns>The updated builder</returns>
+        </member>
+        <member name="M:ManagerStartupExtensions.UseManager(Piranha.AspNetCore.PiranhaApplicationBuilder)">
+            <summary>
+            Uses the Piranha Manager if simple startup is enabled.
+            </summary>
+            <param name="applicationBuilder">The application builder</param>
+            <returns>The updated builder</returns>
+        </member>
+    </members>
+</doc>

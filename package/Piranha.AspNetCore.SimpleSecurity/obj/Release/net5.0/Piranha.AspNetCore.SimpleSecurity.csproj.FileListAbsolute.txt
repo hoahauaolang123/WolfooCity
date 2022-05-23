@@ -1,0 +1,17 @@
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\bin\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.deps.json
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\bin\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.dll
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\bin\Release\net5.0\ref\Piranha.AspNetCore.SimpleSecurity.dll
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\bin\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.pdb
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\bin\Release\net5.0\Piranha.dll
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\bin\Release\net5.0\Piranha.pdb
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\bin\Release\net5.0\Piranha.xml
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.csprojAssemblyReference.cache
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.AssemblyInfoInputs.cache
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.AssemblyInfo.cs
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.csproj.CoreCompileInputs.cache
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.sourcelink.json
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.csproj.CopyComplete
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.dll
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\ref\Piranha.AspNetCore.SimpleSecurity.dll
+C:\Repo\package\Piranha.AspNetCore.SimpleSecurity\obj\Release\net5.0\Piranha.AspNetCore.SimpleSecurity.pdb

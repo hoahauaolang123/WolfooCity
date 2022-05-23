@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "CU2ECXRNezzwVM7CisSRqNNWdzCyrmK4hbXojXLgU0XvALlmI75AAsbdfqEjw1pMSxFAg2tmWsilvhRyA3dmBQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Luci\\Desktop\\piranha.core-master\\core\\Piranha.WebApi\\Piranha.WebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Luci\\.nuget\\packages\\markdig\\0.22.1\\markdig.0.22.1.nupkg.sha512",
+    "C:\\Users\\Luci\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0\\microsoft.build.tasks.git.1.0.0.nupkg.sha512",
+    "C:\\Users\\Luci\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Luci\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Luci\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Luci\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Luci\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0\\microsoft.sourcelink.common.1.0.0.nupkg.sha512",
+    "C:\\Users\\Luci\\.nuget\\packages\\microsoft.sourcelink.github\\1.0.0\\microsoft.sourcelink.github.1.0.0.nupkg.sha512",
+    "C:\\Users\\Luci\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Luci\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

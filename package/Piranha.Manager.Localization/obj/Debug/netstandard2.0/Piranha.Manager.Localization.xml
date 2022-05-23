@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.Manager.Localization</name>
+    </assembly>
+    <members>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Alias">
+            <summary>
+            Gets/sets alias string resources.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Comment">
+            <summary>
+            Gets/sets comment string resources.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Content">
+            <summary>
+            Gets/sets content string resources.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Config">
+            <summary>
+            Gets/sets config string resources.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.General">
+            <summary>
+            Gets/sets general string resources.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Security">
+            <summary>
+            Gets/sets security string resources.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Language">
+            <summary>
+            Gets/sets language string localization.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Media">
+            <summary>
+            Gets/sets media string localization.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Menu">
+            <summary>
+            Gets/sets menu string localization.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Module">
+            <summary>
+            Gets/sets module string localization.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Page">
+            <summary>
+            Gets/sets page string localization.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Post">
+            <summary>
+            Gets/sets post string localization.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.ManagerLocalizer.Site">
+            <summary>
+            Gets/sets site string localization.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.ManagerLocalizer.#ctor(Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Alias},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Comment},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Content},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Config},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.General},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Security},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Language},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Media},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Menu},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Module},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Page},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Post},Microsoft.Extensions.Localization.IStringLocalizer{Piranha.Manager.Localization.Site})">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+    </members>
+</doc>

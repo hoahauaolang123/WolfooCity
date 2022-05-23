@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.Manager.Summernote</name>
+    </assembly>
+    <members>
+        <member name="P:Piranha.Manager.Summernote.Module.Author">
+            <summary>
+            Gets the Author
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Summernote.Module.Name">
+            <summary>
+            Gets the Name
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Summernote.Module.Version">
+            <summary>
+            Gets the Version
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Summernote.Module.Description">
+            <summary>
+            Gets the description
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Summernote.Module.PackageUrl">
+            <summary>
+            Gets the package url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.Summernote.Module.IconUrl">
+            <summary>
+            Gets the icon url.
+            </summary>
+        </member>
+        <member name="F:Piranha.Manager.Summernote.Module.Assembly">
+            <summary>
+            The assembly.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Summernote.Module.#cctor">
+            <summary>
+            Static initialization.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.Summernote.Module.Init">
+            <summary>
+            Initializes the module.
+            </summary>
+        </member>
+        <member name="M:SummernoteExtensions.AddPiranhaSummernote(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the Summernote editor module.
+            </summary>
+            <param name="services">The current service collection</param>
+            <returns>The services</returns>
+        </member>
+        <member name="M:SummernoteExtensions.UsePiranhaSummernote(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Boolean)">
+            <summary>
+            Uses the Tiny MCE editor module.
+            </summary>
+            <param name="builder">The current application builder</param>
+            <param name="withCodeMirrorDefaults"></param>
+            <returns>The builder</returns>
+        </member>
+        <member name="M:SummernoteStartupExtensions.UseSummernote(Piranha.PiranhaServiceBuilder)">
+            <summary>
+            Adds the Summernote editor module if simple startup is used.
+            </summary>
+            <param name="serviceBuilder">The current service builder</param>
+            <returns>The updated builder</returns>
+        </member>
+        <member name="M:SummernoteStartupExtensions.UseSummernote(Piranha.AspNetCore.PiranhaApplicationBuilder)">
+            <summary>
+            Uses the Summernote editor module if simple startup is used.
+            </summary>
+            <param name="applicationBuilder">The application builder</param>
+            <returns>The updated builder</returns>
+        </member>
+    </members>
+</doc>

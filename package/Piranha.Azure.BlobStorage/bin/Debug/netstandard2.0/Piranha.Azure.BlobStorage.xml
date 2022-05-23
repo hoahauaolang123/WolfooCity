@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.Azure.BlobStorage</name>
+    </assembly>
+    <members>
+        <member name="F:Piranha.Azure.BlobStorage._storage">
+            <summary>
+            The private storage account.
+            </summary>
+        </member>
+        <member name="F:Piranha.Azure.BlobStorage._containerName">
+            <summary>
+            The name of the container to use.
+            </summary>
+        </member>
+        <member name="F:Piranha.Azure.BlobStorage._containerUrl">
+            <summary>
+            The container url.
+            </summary>
+        </member>
+        <member name="F:Piranha.Azure.BlobStorage._naming">
+            <summary>
+            How uploaded files should be named to
+            ensure uniqueness.
+            </summary>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorage.#ctor(Microsoft.Azure.Storage.Auth.StorageCredentials,System.String,Piranha.Azure.BlobStorageNaming)">
+            <summary>
+            Creates a new Blog Storage service from the given credentials.
+            </summary>
+            <param name="credentials">The connection credentials</param>
+            <param name="containerName">The container name</param>
+            <param name="naming">How uploaded media files should be named</param>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorage.#ctor(System.String,System.String,Piranha.Azure.BlobStorageNaming)">
+            <summary>
+            Creates a new Blob Storage service from the given connection string.
+            </summary>
+            <param name="connectionString">The connection string</param>
+            <param name="containerName">The container name</param>
+            <param name="naming">How uploaded media files should be named</param>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorage.OpenAsync">
+            <summary>
+            Opens a new storage session.
+            </summary>
+            <returns>A new open session</returns>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorage.GetPublicUrl(Piranha.Models.Media,System.String)">
+            <summary>
+            Gets the public URL for the given media object.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="id">The resource id</param>
+            <returns>The public url</returns>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorage.GetResourceName(Piranha.Models.Media,System.String)">
+            <summary>
+            Gets the resource name for the given media object.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <returns>The public url</returns>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorage.GetResourceName(Piranha.Models.Media,System.String,System.Boolean)">
+            <summary>
+            Gets the resource name for the given media object.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <param name="encode">If the filename should be URL encoded</param>
+            <returns>The public url</returns>
+        </member>
+        <member name="T:Piranha.Azure.BlobStorageModule">
+            <summary>
+            Azure Blob Storage module.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.BlobStorageModule.Author">
+            <summary>
+            Gets the Author
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.BlobStorageModule.Name">
+            <summary>
+            Gets the Name
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.BlobStorageModule.Version">
+            <summary>
+            Gets the Version
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.BlobStorageModule.Description">
+            <summary>
+            Gets the description
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.BlobStorageModule.PackageUrl">
+            <summary>
+            Gets the package url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Azure.BlobStorageModule.IconUrl">
+            <summary>
+            Gets the icon url.
+            </summary>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorageModule.Init">
+            <summary>
+            Initializes the module.
+            </summary>
+        </member>
+        <member name="T:Piranha.Azure.BlobStorageNaming">
+            <summary>
+            How uploaded media files should be named to
+            ensure unique paths.
+            </summary>
+        </member>
+        <member name="F:Piranha.Azure.BlobStorageSession._storage">
+            <summary>
+            The main storage service;
+            </summary>
+        </member>
+        <member name="F:Piranha.Azure.BlobStorageSession._container">
+            <summary>
+            The container in which to store media.
+            </summary>
+        </member>
+        <member name="F:Piranha.Azure.BlobStorageSession._naming">
+            <summary>
+            The current naming convention.
+            </summary>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorageSession.#ctor(Piranha.Azure.BlobStorage,Microsoft.Azure.Storage.Blob.CloudBlobContainer,Piranha.Azure.BlobStorageNaming)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="storage">The current storage</param>
+            <param name="container">The current container</param>
+            <param name="naming">How uploaded media files should be named</param>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorageSession.GetAsync(Piranha.Models.Media,System.String,System.IO.Stream)">
+            <summary>
+            Writes the content for the specified media content to the given stream.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <param name="stream">The output stream</param>
+            <returns>If the media was found</returns>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorageSession.PutAsync(Piranha.Models.Media,System.String,System.String,System.IO.Stream)">
+            <summary>
+            Stores the given media content.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <param name="contentType">The content type</param>
+            <param name="stream">The input stream</param>
+            <returns>The public URL</returns>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorageSession.PutAsync(Piranha.Models.Media,System.String,System.String,System.Byte[])">
+            <summary>
+            Stores the given media content.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+            <param name="contentType">The content type</param>
+            <param name="bytes">The binary data</param>
+            <returns>The public URL</returns>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorageSession.DeleteAsync(Piranha.Models.Media,System.String)">
+            <summary>
+            Deletes the content for the specified media.
+            </summary>
+            <param name="media">The media file</param>
+            <param name="filename">The file name</param>
+        </member>
+        <member name="M:Piranha.Azure.BlobStorageSession.Dispose">
+            <summary>
+            Disposes the session.
+            </summary>
+        </member>
+        <member name="M:BlobStorageExtensions.UseBlobStorage(Piranha.PiranhaServiceBuilder,Microsoft.Azure.Storage.Auth.StorageCredentials,System.String,Piranha.Azure.BlobStorageNaming,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Adds the Azure BlobStorage module.
+            </summary>
+            <param name="serviceBuilder">The service builder</param>
+            <param name="credentials">The auth credentials</param>
+            <param name="containerName">The optional container name</param>
+            <param name="naming">How uploaded media files should be named</param>
+            <param name="scope">The optional service scope. Default is singleton</param>
+            <returns>The service collection</returns>
+        </member>
+        <member name="M:BlobStorageExtensions.UseBlobStorage(Piranha.PiranhaServiceBuilder,System.String,System.String,Piranha.Azure.BlobStorageNaming,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Adds the Azure BlobStorage module.
+            </summary>
+            <param name="serviceBuilder">The service builder</param>
+            <param name="connectionString">The connection string</param>
+            <param name="containerName">The optional container name</param>
+            <param name="naming">How uploaded media files should be named</param>
+            <param name="scope">The optional service scope. Default is singleton</param>
+            <returns>The service collection</returns>
+        </member>
+        <member name="M:BlobStorageExtensions.AddPiranhaBlobStorage(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Azure.Storage.Auth.StorageCredentials,System.String,Piranha.Azure.BlobStorageNaming,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Adds the services for the Azure BlobStorage service.
+            </summary>
+            <param name="services">The current service collection</param>
+            <param name="credentials">The auth credentials</param>
+            <param name="containerName">The optional container name</param>
+            <param name="naming">How uploaded media files should be named</param>
+            <param name="scope">The optional service scope. Default is singleton</param>
+            <returns>The service collection</returns>
+        </member>
+        <member name="M:BlobStorageExtensions.AddPiranhaBlobStorage(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String,Piranha.Azure.BlobStorageNaming,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Adds the services for the Azure BlobStorage service.
+            </summary>
+            <param name="services">The current service collection</param>
+            <param name="connectionString">The connection string</param>
+            <param name="containerName">The optional container name</param>
+            <param name="naming">How uploaded media files should be named</param>
+            <param name="scope">The optional service scope. Default is singleton</param>
+            <returns>The service collection</returns>
+        </member>
+    </members>
+</doc>

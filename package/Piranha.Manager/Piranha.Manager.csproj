@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <Description>Manager panel for Piranha CMS for AspNetCore</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package information">
+    <Version>9.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.95.3" />
+    <PackageReference Include="DataTables.AspNet.Core" Version="2.0.2" />
+    <PackageReference Include="Microsoft.AspNet.Mvc.es" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="5.0.1" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="all" />
+    <PackageReference Include="PagedList" Version="1.17.0" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+    <ProjectReference Include="..\..\WFCity.Data\WFCity.Data.csproj" />
+    <ProjectReference Include="..\Piranha\Piranha.csproj" />
+    <ProjectReference Include="..\Piranha.AspNetCore\Piranha.AspNetCore.csproj" />
+    <ProjectReference Include="..\Piranha.Manager.Localization\Piranha.Manager.Localization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assets\dist\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="node_modules\**" />
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="package.json" />
+    <Content Remove="package-lock.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="assets\dist\js\select2.full.js" />
+    <None Remove="assets\dist\js\select2.full.min.js" />
+    <None Remove="assets\dist\js\select2.js" />
+    <None Remove="assets\dist\js\select2.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,201 @@
+﻿@page "/quan-ly-ve/{LoaiVe:int?}/{TrangThai:int?}"
+@model Piranha.Manager.Areas.Manager.ThongKeVeModel
+@{
+}
+@{
+    var lv = this.Request.RouteValues["LoaiVe"] ?? "-1";
+    var tt = this.Request.RouteValues["TrangThai"] ?? "-1";
+
+    var loaiVe = Int32.Parse(lv.ToString());
+    var trangThai = Int32.Parse(tt.ToString());
+}
+<input type="text" hidden name="TrangThai2" id="TrangThai2" value="@trangThai" />
+<input type="text" hidden name="LoaiVe2" id="LoaiVe2" value="@loaiVe" />
+<div id="formview search-box">
+    <div class="card m-3">
+        <h4> Thống kê số liệu vé</h4>
+        <div class="">
+            <div class="row">
+                <div class="form-group col-3">
+                    @Html.Label("Mã vé")
+                    @Html.TextBox("MaVe", null, new { @class = "form-control" })
+                </div>
+                <div class="form-group col-3">
+                    @Html.Label("Loại vé")
+                    <select class="form-control" id="LoaiVe" name="LoaiVe">
+                        <option value="">
+                            Chọn loại vé
+                        </option>
+                        <option value="1">
+                            Vé ngày thường
+                        </option>
+                        <option value="2">
+                            Vé ngày lễ, cuối tuần
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    @Html.Label("Ngày tạo vé")
+                    <div>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                            @Html.TextBox("NgayTaoVe", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    @Html.Label("Ngày bán vé")
+                    <div>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                            @Html.TextBox("NgayBanVe", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-3">
+                    @Html.Label("Trạng thái")
+                    <select class="form-control" id="TrangThai" name="TrangThai">
+                        <option value="">
+                            Chọn trạng thái
+                        </option>
+                        <option value="0">
+                            0. Mới tạo
+                        </option>
+                        <option value="1">
+                            1. Đã xuất excel
+                        </option>
+                        <option value="2">
+                            2. Đã bán
+                        </option>
+                        <option value="3">
+                            3. Đã hết hạn
+                        </option>
+                    </select>
+                </div>
+                @* <div class="form-group col-3">
+                @Html.Label("Số điện thoại khách hàng")
+                @Html.TextBox("SoDienThoai", null, new { @class = "form-control" })
+                </div>
+                <div class="form-group col-3">
+                @Html.Label("Họ tên khách hàng")
+                @Html.TextBox("HoTen", null, new { @class = "form-control" })
+                </div>*@
+                <div class="form-group col-3" style="margin-top: 29px">
+                    <span style="cursor:pointer;float:left" onclick="TimKiem()" class="btn btn-primary ml-2">Tìm kiếm</span>
+                </div>
+                <div class="form-group col-6" style="margin-top: 29px">
+                     <form method="post">
+                    <input  class="btn btn-success"  style="cursor:pointer;float:right" type="submit" value="Xuất file excel" asp-page-handler="Export" />
+                </form>
+                </div>
+              
+            </div>
+        </div>
+        <div class="card-body">
+            <table id="tbl" width="100%" class="table table-bordered display">
+                <thead>
+                    <tr>
+                        <th class="bg-info">STT</th>
+                        <th class="bg-info">Mã vé</th>
+                        <th class="bg-info">Loại vé</th>
+                        <th class="bg-info">Ngày tạo vé</th>
+                        <th class="bg-info">Ngày bán vé</th>
+                        <th class="bg-info">Trạng thái</th>
+                        <th class="bg-info">Họ tên KH</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $("#LoaiVe").select2();
+    $("#TrangThai").select2();
+    var tbl = $("#tbl").DataTable({
+        ordering: false,
+        serverSide: true,
+        processing: true,
+        ajax: {
+            url: "?handler=DanhSachVe",
+            type: "GET",
+            data: function(data) {
+                data.MaVe = $("#MaVe").val(),
+                    data.LoaiVeId = $("#LoaiVe").val(),
+                    data.NgayTaoVe = $("#NgayTaoVe").val(),
+                    data.NgayBanVe = $("#NgayBanVe").val(),
+                    data.TrangThai = $("#TrangThai").val()
+            },
+        },
+        searching: false,
+        columns: [
+            {
+                data: "ThongTinVeId",
+                className: "text-center",
+                render: function(data, type, row, meta) {
+                    var rowNum = meta.row + meta.settings._iDisplayStart + 1;
+                    return rowNum;
+                }
+            },
+            {
+                data: "MaVe",
+            },
+            {
+                data: "TenVe",
+                className: "text-center",
+
+            },
+            {
+                data: "NgayTaoVe",
+                className: "text-center",
+
+            },
+            {
+                data: "NgayBanVe",
+                className: "text-center",
+
+            },
+            {
+                data: "TrangThai",
+                className: "text-center",
+
+            },
+            {
+                data: "TenKhachHang",
+
+            }
+        ]
+    })
+
+
+    function TimKiem() {
+        tbl.ajax.reload();
+    }
+    $('#NgayTaoVe').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        autoUpdateInput: false,
+        minYear: 1900,
+        locale: vn_daterangepicker
+    })
+    $('input[name="NgayTaoVe"]').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.endDate.format('DD/MM/YYYY'));
+    });
+    $('#NgayBanVe').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        autoUpdateInput: false,
+        minYear: 1900,
+        locale: vn_daterangepicker
+    })
+    $('input[name="NgayBanVe"]').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.endDate.format('DD/MM/YYYY'));
+    });
+    $('#SoDienThoai').keyup(function(e) {
+        if ((e.keyCode > 47 && e.keyCode < 58) || (e.keyCode < 106 && e.keyCode > 95)) {
+            this.value = this.value.replace(/(\d{3})\?/g, '$1-');
+            return true;
+        }
+        //remove all chars, except dash and digits
+        this.value = this.value.replace(/[^\-0-9]/g, '');
+    });
+</script>

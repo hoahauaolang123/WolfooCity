@@ -1,0 +1,16 @@
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\bin\Debug\netstandard2.0\Piranha.Azure.BlobStorage.deps.json
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\bin\Debug\netstandard2.0\Piranha.Azure.BlobStorage.dll
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\bin\Debug\netstandard2.0\Piranha.Azure.BlobStorage.pdb
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\bin\Debug\netstandard2.0\Piranha.Azure.BlobStorage.xml
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\bin\Debug\netstandard2.0\Piranha.dll
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\bin\Debug\netstandard2.0\Piranha.pdb
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\bin\Debug\netstandard2.0\Piranha.xml
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\obj\Debug\netstandard2.0\Piranha.Azure.BlobStorage.csprojAssemblyReference.cache
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\obj\Debug\netstandard2.0\Piranha.Azure.BlobStorage.sourcelink.json
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\obj\Debug\netstandard2.0\Piranha.Azure.BlobStorage.AssemblyInfoInputs.cache
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\obj\Debug\netstandard2.0\Piranha.Azure.BlobStorage.AssemblyInfo.cs
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\obj\Debug\netstandard2.0\Piranha.Azure.BlobStorage.csproj.CopyComplete
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\obj\Debug\netstandard2.0\Piranha.Azure.BlobStorage.dll
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\obj\Debug\netstandard2.0\Piranha.Azure.BlobStorage.xml
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\obj\Debug\netstandard2.0\Piranha.Azure.BlobStorage.pdb
+C:\Users\Luci\Desktop\piranha.core-master\core\Piranha.Azure.BlobStorage\obj\Debug\netstandard2.0\Piranha.Azure.BlobStorage.csproj.CoreCompileInputs.cache

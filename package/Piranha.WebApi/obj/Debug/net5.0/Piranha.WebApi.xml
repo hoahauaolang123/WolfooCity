@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Piranha.WebApi.MediaApiController.#ctor(Piranha.IApi,Microsoft.AspNetCore.Authorization.IAuthorizationService)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="auth">The authorization service</param>
+        </member>
+        <member name="M:Piranha.WebApi.MediaApiController.GetById(System.Guid)">
+            <summary>
+            Gets the media asset with the specified id.
+            </summary>
+            <param name="id">The media id</param>
+            <returns>The media asset</returns>
+        </member>
+        <member name="M:Piranha.WebApi.MediaApiController.GetByFolderId(System.Nullable{System.Guid})">
+            <summary>
+            Gets all of the media assets located in the folder
+            with the specified id. Not providing a folder id will
+            return all of the media assets at root level.
+            </summary>
+            <param name="folderId">The optional folder id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.WebApi.MediaApiController.GetStructure">
+            <summary>
+            Gets the media folder structure.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Piranha.WebApi.Module.Author">
+            <summary>
+            Gets the Author
+            </summary>
+        </member>
+        <member name="P:Piranha.WebApi.Module.Name">
+            <summary>
+            Gets the Name
+            </summary>
+        </member>
+        <member name="P:Piranha.WebApi.Module.Version">
+            <summary>
+            Gets the Version
+            </summary>
+        </member>
+        <member name="P:Piranha.WebApi.Module.Description">
+            <summary>
+            Gets the description
+            </summary>
+        </member>
+        <member name="P:Piranha.WebApi.Module.PackageUrl">
+            <summary>
+            Gets the package url.
+            </summary>
+        </member>
+        <member name="P:Piranha.WebApi.Module.IconUrl">
+            <summary>
+            Gets the icon url.
+            </summary>
+        </member>
+        <member name="P:Piranha.WebApi.Module.AllowAnonymousAccess">
+            <summary>
+            Gets/sets if anonymous users should be able to access
+            the api.
+            </summary>
+        </member>
+        <member name="F:Piranha.WebApi.Module.Assembly">
+            <summary>
+            The assembly.
+            </summary>
+        </member>
+        <member name="F:Piranha.WebApi.Module.LastModified">
+            <summary>
+            Last modification date of the assembly.
+            </summary>
+        </member>
+        <member name="M:Piranha.WebApi.Module.#cctor">
+            <summary>
+            Static initialization.
+            </summary>
+        </member>
+        <member name="M:Piranha.WebApi.Module.Init">
+            <summary>
+            Initializes the module.
+            </summary>
+        </member>
+        <member name="M:Piranha.WebApi.PageApiController.#ctor(Piranha.IApi,Microsoft.AspNetCore.Authorization.IAuthorizationService)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="auth">The authorization service</param>
+        </member>
+        <member name="M:Piranha.WebApi.PageApiController.GetById(System.Guid)">
+            <summary>
+            Gets the full page model for the page with
+            the specified id.
+            </summary>
+            <param name="id">The page id</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.WebApi.PageApiController.GetBySlug(System.String)">
+            <summary>
+            Gets the full page model for the page with
+            the specified slug in the default site.
+            </summary>
+            <param name="slug">The slug</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.WebApi.PageApiController.GetBySlugAndSite(System.Guid,System.String)">
+            <summary>
+            Gets the full page model for the page with
+            the specified slug and site.
+            </summary>
+            <param name="siteId">The site id</param>
+            <param name="slug">The slug</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.WebApi.PageApiController.GetInfoById(System.Guid)">
+            <summary>
+            Gets the page info model for the page with
+            the specified id.
+            </summary>
+            <param name="id">The page id</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.WebApi.PageApiController.GetInfoBySlug(System.String)">
+            <summary>
+            Gets the page info model for the page with
+            the specified slug in the default site.
+            </summary>
+            <param name="slug">The slug</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.WebApi.PageApiController.GetInfoBySlugAndSite(System.Guid,System.String)">
+            <summary>
+            Gets the page info model for the page with
+            the specified slug and site.
+            </summary>
+            <param name="siteId">The site id</param>
+            <param name="slug">The slug</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="T:Piranha.WebApi.Permissions">
+            <summary>
+            The available api permissions.
+            </summary>
+        </member>
+        <member name="M:Piranha.WebApi.PostApiController.#ctor(Piranha.IApi,Microsoft.AspNetCore.Authorization.IAuthorizationService)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="auth">The authorization service</param>
+        </member>
+        <member name="M:Piranha.WebApi.PostApiController.GetById(System.Guid)">
+            <summary>
+            Gets the full post model for the post with
+            the specified id.
+            </summary>
+            <param name="id">The post id</param>
+            <returns>The post model</returns>
+        </member>
+        <member name="M:Piranha.WebApi.PostApiController.GetBySlugAndArchive(System.Guid,System.String)">
+            <summary>
+            Gets the full post model for the post with
+            the specified archive and slug.
+            </summary>
+            <param name="archiveId">The archive id</param>
+            <param name="slug">The slug</param>
+            <returns>The post model</returns>
+        </member>
+        <member name="M:Piranha.WebApi.PostApiController.GetInfoById(System.Guid)">
+            <summary>
+            Gets the post info model for the post with
+            the specified id.
+            </summary>
+            <param name="id">The post id</param>
+            <returns>The post model</returns>
+        </member>
+        <member name="M:Piranha.WebApi.PostApiController.GetInfoBySlugAndSite(System.Guid,System.String)">
+            <summary>
+            Gets the post info model for the post with
+            the specified archive and slug.
+            </summary>
+            <param name="archiveId">The archive id</param>
+            <param name="slug">The slug</param>
+            <returns>The post model</returns>
+        </member>
+        <member name="M:Piranha.WebApi.SitemapApiController.#ctor(Piranha.IApi,Microsoft.AspNetCore.Authorization.IAuthorizationService)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="auth">The authorization service</param>
+        </member>
+        <member name="M:Piranha.WebApi.SitemapApiController.GetById(System.Nullable{System.Guid})">
+            <summary>
+            Gets the public sitemap for the default or specified site.
+            </summary>
+            <param name="id">The optional site id</param>
+            <returns>The sitemap</returns>
+        </member>
+        <member name="P:Piranha.WebApi.WebApiOptions.AllowAnonymousAccess">
+            <summary>
+            Gets/sets if anonymous users should be able to access
+            the api. The default value is false.
+            </summary>
+        </member>
+        <member name="M:WebApiModuleExtensions.UseApi(Piranha.PiranhaServiceBuilder,System.Action{Piranha.WebApi.WebApiOptions})">
+            <summary>
+            Adds the Piranha Api module.
+            </summary>
+            <param name="serviceBuilder">The service builder</param>
+            <param name="configure">The optional api configuration</param>
+            <returns>The services</returns>
+        </member>
+        <member name="M:WebApiModuleExtensions.AddPiranhaApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Piranha.WebApi.WebApiOptions})">
+            <summary>
+            Adds the Piranha Api module.
+            </summary>
+            <param name="services">The current service collection</param>
+            <param name="configure">The optional api configuration</param>
+            <returns>The services</returns>
+        </member>
+    </members>
+</doc>

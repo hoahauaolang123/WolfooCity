@@ -1,0 +1,2728 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.Data.EF</name>
+    </assembly>
+    <members>
+        <member name="P:Piranha.Data.Alias.Site">
+            <summary>
+            Gets/sets the site this alias is for.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Piranha.Data.Block">
+            <summary>
+            Reusable content block.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Block.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Block.ParentId">
+            <summary>
+            This is not part of the data model. It's only used
+            for internal mapping.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Block.CLRType">
+            <summary>
+            Gets/sets the CLR type of the block.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Block.Title">
+            <summary>
+            Gets/sets the optional title. This property
+            is only used for reusable blocks within the
+            block library.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Block.IsReusable">
+            <summary>
+            Gets/sets if this is a reusable block.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Block.Created">
+            <summary>
+            Gets/sets the created date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Block.LastModified">
+            <summary>
+            Gets/sets the last modification date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Block.Fields">
+            <summary>
+            Gets/sets the available fields.
+            </summary>
+        </member>
+        <member name="T:Piranha.Data.BlockField">
+            <summary>
+            Content field for a block.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.BlockField.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.BlockField.BlockId">
+            <summary>
+            Gets/sets the id of the block this field
+            belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.BlockField.FieldId">
+            <summary>
+            Gets/sets the field id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.BlockField.SortOrder">
+            <summary>
+            Gets/sets the sort index if the block
+            is a collection.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.BlockField.CLRType">
+            <summary>
+            Gets/sets the CLR type of the field.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.BlockField.Value">
+            <summary>
+            Gets/sets the serialized field value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Piranha.Data.BlockField.Block">
+            <summary>
+            Gets/sets the block containing the field.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Category.BlogId">
+            <summary>
+            Gets/sets the id of the blog page this
+            category belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Category.Blog">
+            <summary>
+            Gets/sets the blog page this category belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Comment.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Comment.UserId">
+            <summary>
+            Gets/sets the optional user id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Comment.Author">
+            <summary>
+            Gets/sets the author name.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Comment.Email">
+            <summary>
+            Gets/sets the email address.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Comment.Url">
+            <summary>
+            Gets/sets the optional website URL.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Comment.IsApproved">
+            <summary>
+            Gets/sets if the comment has been approved. Comments are
+            approved by default unless you use some kind of comment
+            validation mechanism.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Comment.Body">
+            <summary>
+            Gets/sets the comment body.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Comment.Created">
+            <summary>
+            Gets/sets the created date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Content.CategoryId">
+            <summary>
+            Gets/sets the optional category id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Content.TypeId">
+            <summary>
+            Gets/sets the id of the content type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Content.PrimaryImageId">
+            <summary>
+            Gets/sets the optional primary image id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Content.Excerpt">
+            <summary>
+            Gets/sets the optional excerpt.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Content.Category">
+            <summary>
+            Gets/sets the optional category.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Content.Tags">
+            <summary>
+            Gets/sets the available tags.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Content.Translations">
+            <summary>
+            Gets/sets the available translations.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Content.Type">
+            <summary>
+            Gets/sets the content type.
+            </summary>
+        </member>
+        <member name="M:Piranha.Data.Content.SetTranslation(System.Guid,System.Guid,System.Object)">
+            <summary>
+            Sets the translation for the specified language.
+            </summary>
+            <param name="parentId">The parent id</param>
+            <param name="languageId">The language id</param>
+            <param name="model">The model</param>
+        </member>
+        <member name="P:Piranha.Data.ContentBase`1.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentBase`1.Title">
+            <summary>
+            Gets/sets the main title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentBase`1.Created">
+            <summary>
+            Gets/sets the created date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentBase`1.LastModified">
+            <summary>
+            Gets/sets the last modification date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentBase`1.Fields">
+            <summary>
+            Gets/sets the available fields.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentField.ContentId">
+            <summary>
+            Gets/sets the content id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentField.Content">
+            <summary>
+            Gets/sets the content.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentField.Translations">
+            <summary>
+            Gets/sets the available translations.
+            </summary>
+        </member>
+        <member name="M:Piranha.Data.ContentField.SetTranslation(System.Guid,System.Guid,System.Object)">
+            <summary>
+            Sets the translation for the specified language.
+            </summary>
+            <param name="parentId">The parent id</param>
+            <param name="languageId">The language id</param>
+            <param name="model">The model</param>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldBase.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldBase.RegionId">
+            <summary>
+            Gets/sets the region id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldBase.FieldId">
+            <summary>
+            Gets/sets the field id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldBase.SortOrder">
+            <summary>
+            Gets/sets the sort order.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldBase.CLRType">
+            <summary>
+            Gets/sets the sort order of the value.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldBase.Value">
+            <summary>
+            Gets/sets the JSON serialized value.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldTranslation.FieldId">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldTranslation.LanguageId">
+            <summary>
+            Gets/sets the language id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldTranslation.Value">
+            <summary>
+            Gets/sets the serialized value.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldTranslation.Field">
+            <summary>
+            Gets/sets the field.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentFieldTranslation.Language">
+            <summary>
+            Gets/sets the language.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentGroup.Created">
+            <summary>
+            Gets/sets the created date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentGroup.LastModified">
+            <summary>
+            Gets/sets the last modification date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentRevisionBase.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentRevisionBase.Data">
+            <summary>
+            Gets/sets the data of the revision serialized
+            as JSON.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentRevisionBase.Created">
+            <summary>
+            Gets/sets the created date.
+            </summary>
+        </member>
+        <member name="M:Piranha.Data.ContentRevisionBase.GetData``1">
+            <summary>
+            Gets the revision data deserialized as the
+            specified type.
+            </summary>
+            <typeparam name="T">The type</typeparam>
+            <returns>The deserialized revision data</returns>
+        </member>
+        <member name="P:Piranha.Data.ContentTaxonomy.ContentId">
+            <summary>
+            Gets/sets the content id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTaxonomy.TaxonomyId">
+            <summary>
+            Gets/sets the taxonomy id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTaxonomy.Content">
+            <summary>
+            Gets/sets the content.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTaxonomy.Taxonomy">
+            <summary>
+            Gets/sets the taxonomy.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTranslation.ContentId">
+            <summary>
+            Gets/sets the content id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTranslation.LanguageId">
+            <summary>
+            Gets/sets the language id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTranslation.Title">
+            <summary>
+            Gets/sets the main title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTranslation.Excerpt">
+            <summary>
+            Gets/sets the optional excerpt.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTranslation.Content">
+            <summary>
+            Gets/sets the content.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTranslation.Language">
+            <summary>
+            Gets/sets the language.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentType.Group">
+            <summary>
+            Gets/sets the content group.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTypeBase.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTypeBase.CLRType">
+            <summary>
+            Gets/sets the CLR type of the content model.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTypeBase.Body">
+            <summary>
+            Gets/sets the JSON serialized body of the post type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTypeBase.Created">
+            <summary>
+            Gets/sets the created date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ContentTypeBase.LastModified">
+            <summary>
+            Gets/sets the last modification date.
+            </summary>
+        </member>
+        <member name="T:Piranha.Data.ICategorized">
+            <summary>
+            Interface for categorized content.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.ICategorized.CategoryId">
+            <summary>
+            Gets/sets the category id.
+            </summary>
+        </member>
+        <member name="T:Piranha.Data.IContentBlock">
+            <summary>
+            Connection between a page and a content.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.IContentBlock.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.IContentBlock.BlockId">
+            <summary>
+            Gets/sets the block id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.IContentBlock.SortOrder">
+            <summary>
+            Gets/sets the zero based sort index.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.IContentBlock.Block">
+            <summary>
+            Gets/sets the block data.
+            </summary>
+        </member>
+        <member name="T:Piranha.Data.ITranslatable">
+            <summary>
+            Interface for translatable data.
+            </summary>
+        </member>
+        <member name="M:Piranha.Data.ITranslatable.SetTranslation(System.Guid,System.Guid,System.Object)">
+            <summary>
+            Sets the translation for the specified language.
+            </summary>
+            <param name="parentId">The parent id</param>
+            <param name="languageId">The language id</param>
+            <param name="model">The model</param>
+        </member>
+        <member name="P:Piranha.Data.Language.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Language.Title">
+            <summary>
+            Gets/sets the display title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Language.Culture">
+            <summary>
+            Gets/sets the culture.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Language.IsDefault">
+            <summary>
+            Gets/sets if this is the default language.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Media.Properties">
+            <summary>
+            Gets/sets the user defined properties serialized as JSON.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Media.Folder">
+            <summary>
+            Gets/sets the optional folder.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Media.Versions">
+            <summary>
+            Gets/sets the available versions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.MediaFolder.Media">
+            <summary>
+            Gets/sets the available media.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.MediaVersion.MediaId">
+            <summary>
+            Gets/sets the id of the media this is
+            a version of.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.MediaVersion.Media">
+            <summary>
+            Gets/sets the media this is a version of.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.PageTypeId">
+            <summary>
+            Gets/sets the page type id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.SiteId">
+            <summary>
+            Gets/sets the site id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.ParentId">
+            <summary>
+            Gets/sets the optional parent id. Used to
+            position the page in the sitemap.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.ContentType">
+            <summary>
+            Gets/sets the type of content this page
+            contains.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.PrimaryImageId">
+            <summary>
+            Gets/sets the optional primary image id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.Excerpt">
+            <summary>
+            Gets/sets the optional excerpt.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.SortOrder">
+            <summary>
+            Gets/sets the pages sort order in its
+            hierarchical position.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.NavigationTitle">
+            <summary>
+            Gets/sets the optional navigation title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.IsHidden">
+            <summary>
+            Gets/sets if the page should be visible
+            in the navigation.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.RedirectUrl">
+            <summary>
+            Gets/sets the optional redirect.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Piranha.Data.Page.RedirectType">
+            <summary>
+            Gets/sets the redirect type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Piranha.Data.Page.EnableComments">
+            <summary>
+            Gets/sets if comments should be enabled.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Piranha.Data.Page.CloseCommentsAfterDays">
+            <summary>
+            Gets/sets after how many days after publish date comments
+            should be closed. A value of 0 means never.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.Site">
+            <summary>
+            Gets/sets the site.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.PageType">
+            <summary>
+            Gets/sets the associated page type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.Parent">
+            <summary>
+            Gets/sets the optional page.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.Blocks">
+            <summary>
+            Gets/sets the available page blocks.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.Permissions">
+            <summary>
+            Gets/sets the available permissions.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Page.OriginalPageId">
+            <summary>
+            Gets/sets the optional page this page is a copy of
+            </summary>
+        </member>
+        <member name="T:Piranha.Data.PageBlock">
+            <summary>
+            Connection between a page and a block.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageBlock.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageBlock.ParentId">
+            <summary>
+            This property is not used any more, but is kept for atm
+            backwards compatible SQLite migrations.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageBlock.PageId">
+            <summary>
+            Gets/sets the page id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageBlock.BlockId">
+            <summary>
+            Gets/sets the block id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageBlock.SortOrder">
+            <summary>
+            Gets/sets the zero based sort index.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageBlock.Page">
+            <summary>
+            Gets/sets the page containing the block.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageBlock.Block">
+            <summary>
+            Gets/sets the block data.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageComment.PageId">
+            <summary>
+            Gets/sets the page id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageComment.Page">
+            <summary>
+            Gets/sets the page.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageField.PageId">
+            <summary>
+            Gets/sets the page id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageField.Page">
+            <summary>
+            Gets/sets the page.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageRevision.PageId">
+            <summary>
+            Gets/sets the id of the page this revision
+            belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PageRevision.Page">
+            <summary>
+            Gets/sets the page this revision belongs to.
+            </summary>
+        </member>
+        <member name="T:Piranha.Data.Param">
+            <summary>
+            String parameter.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.PostTypeId">
+            <summary>
+            Gets/sets the post type id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.BlogId">
+            <summary>
+            Gets/sets the id of the blog page this
+            post belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.CategoryId">
+            <summary>
+            Gets/sets the category id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.PrimaryImageId">
+            <summary>
+            Gets/sets the optional primary image id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.Excerpt">
+            <summary>
+            Gets/sets the optional excerpt.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.RedirectUrl">
+            <summary>
+            Gets/sets the optional redirect.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Piranha.Data.Post.RedirectType">
+            <summary>
+            Gets/sets the redirect type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Piranha.Data.Post.EnableComments">
+            <summary>
+            Gets/sets if comments should be enabled.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Piranha.Data.Post.CloseCommentsAfterDays">
+            <summary>
+            Gets/sets after how many days after publish date comments
+            should be closed. A value of 0 means never.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.PostType">
+            <summary>
+            Gets/sets the associated post type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.Blog">
+            <summary>
+            Gets/sets the blog page this category belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.Category">
+            <summary>
+            Gets/sets the post category.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.Tags">
+            <summary>
+            Gets/sets the available tags.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.Blocks">
+            <summary>
+            Gets/sets the available post blocks.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Post.Permissions">
+            <summary>
+            Gets/sets the available permissions.
+            </summary>
+        </member>
+        <member name="T:Piranha.Data.PostBlock">
+            <summary>
+            Connection between a post and a block.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostBlock.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostBlock.ParentId">
+            <summary>
+            This property is not used any more, but is kept for atm
+            backwards compatible SQLite migrations.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostBlock.PostId">
+            <summary>
+            Gets/sets the post id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostBlock.BlockId">
+            <summary>
+            Gets/sets the block id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostBlock.SortOrder">
+            <summary>
+            Gets/sets the zero based sort index.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostBlock.Post">
+            <summary>
+            Gets/sets the post containing the block.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostBlock.Block">
+            <summary>
+            Gets/sets the block data.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostComment.PostId">
+            <summary>
+            Gets/sets the post id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostComment.Post">
+            <summary>
+            Gets/sets the post.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostField.PostId">
+            <summary>
+            Gets/sets the post id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostField.Post">
+            <summary>
+            Gets/sets the post.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostRevision.PostId">
+            <summary>
+            Gets/sets the id of the post this revision
+            belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostRevision.Post">
+            <summary>
+            Gets/sets the post this revision belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostTag.PostId">
+            <summary>
+            Gets/sets the post id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostTag.TagId">
+            <summary>
+            Gets/sets the tag id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostTag.Post">
+            <summary>
+            Gets/sets the post.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.PostTag.Tag">
+            <summary>
+            Gets/sets the tag.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.Slug">
+            <summary>
+            Gets/sets the unique slug.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.MetaTitle">
+            <summary>
+            Gets/sets the optional meta title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.MetaKeywords">
+            <summary>
+            Gets/sets the optional meta keywords.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.MetaDescription">
+            <summary>
+            Gets/sets the optional meta description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.MetaIndex">
+            <summary>
+            Gets/sets the meta index.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.MetaFollow">
+            <summary>
+            Gets/sets the meta follow.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.MetaPriority">
+            <summary>
+            Gets/sets the meta priority.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.OgTitle">
+            <summary>
+            Gets/sets the optional open graph title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.OgDescription">
+            <summary>
+            Gets/sets the optional open graph description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.OgImageId">
+            <summary>
+            Gets/sets the optional open graph image.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.Route">
+            <summary>
+            Gets/sets the optional route.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.RoutedContentBase`1.Published">
+            <summary>
+            Gets/sets the publishe date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.LanguageId">
+            <summary>
+            Gets/sets the language id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.SiteTypeId">
+            <summary>
+            Gets/sets the optional site type id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.InternalId">
+            <summary>
+            Gets/sets the internal textual id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.Description">
+            <summary>
+            Gets/sets the optional description.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.LogoId">
+            <summary>
+            Gets/sets the optional logo image id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.Hostnames">
+            <summary>
+            Gets/sets the optional hostnames to bind this site for.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.IsDefault">
+            <summary>
+            Gets/sets if this is the default site.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.Culture">
+            <summary>
+            Gets/sets the optional culture for the site.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.ContentLastModified">
+            <summary>
+            Gets/sets the global last modification date
+            of the site's content.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Site.Language">
+            <summary>
+            Gets/sets the selected language.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.SiteField.SiteId">
+            <summary>
+            Gets/sets the site id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.SiteField.Site">
+            <summary>
+            Gets/sets the site.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Tag.BlogId">
+            <summary>
+            Gets/sets the id of the blog page this
+            category belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Tag.Blog">
+            <summary>
+            Gets/sets the blog page this category belongs to.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Taxonomy.GroupId">
+            <summary>
+            Gets/sets the id used for grouping.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.Taxonomy.Type">
+            <summary>
+            Gets/sets the taxonomy type.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.TaxonomyBase.Id">
+            <summary>
+            Gets/sets the unique id.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.TaxonomyBase.Title">
+            <summary>
+            Gets/sets the title.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.TaxonomyBase.Slug">
+            <summary>
+            Gets/sets the slug.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.TaxonomyBase.Created">
+            <summary>
+            Gets/sets the created date.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.TaxonomyBase.LastModified">
+            <summary>
+            Gets/sets the last modification date.
+            </summary>
+        </member>
+        <member name="T:Piranha.Data.TaxonomyType">
+            <summary>
+            The different types of taxonomies
+            </summary>
+        </member>
+        <member name="T:Piranha.Data.EF.Module">
+            <summary>
+            The identity module.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.EF.Module.Author">
+            <summary>
+            Gets the Author
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.EF.Module.Name">
+            <summary>
+            Gets the Name
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.EF.Module.Version">
+            <summary>
+            Gets the Version
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.EF.Module.Description">
+            <summary>
+            Gets the description
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.EF.Module.PackageUrl">
+            <summary>
+            Gets the package url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Data.EF.Module.IconUrl">
+            <summary>
+            Gets the icon url.
+            </summary>
+        </member>
+        <member name="M:Piranha.Data.EF.Module.#cctor">
+            <summary>
+            Create automapping.
+            </summary>
+        </member>
+        <member name="M:Piranha.Data.EF.Module.Init">
+            <summary>
+            Initializes the module.
+            </summary>
+        </member>
+        <member name="F:Piranha.Db`1.IsInitialized">
+            <summary>
+            Gets/sets whether the db context as been initialized. This
+            is only performed once in the application lifecycle.
+            </summary>
+        </member>
+        <member name="F:Piranha.Db`1.Mutex">
+            <summary>
+            The object mutext used for initializing the context.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Aliases">
+            <summary>
+            Gets/sets the alias set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Blocks">
+            <summary>
+            Gets/sets the block set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.BlockFields">
+            <summary>
+            Gets/sets the block field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Categories">
+            <summary>
+            Gets/sets the category set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Content">
+            <summary>
+            Gets/sets the content set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.ContentFields">
+            <summary>
+            Gets/sets the content field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.ContentFieldTranslations">
+            <summary>
+            Gets/sets the content field translation set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.ContentTaxonomies">
+            <summary>
+            Gets/sets the content taxonomy set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.ContentTranslations">
+            <summary>
+            Gets/sets the content translation set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.ContentGroups">
+            <summary>
+            Gets/sets the content group set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.ContentTypes">
+            <summary>
+            Gets/sets the content type set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Languages">
+            <summary>
+            Gets/sets the language set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Media">
+            <summary>
+            Gets/sets the media set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.MediaFolders">
+            <summary>
+            Gets/sets the media folder set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.MediaVersions">
+            <summary>
+            Gets/sets the media version set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Pages">
+            <summary>
+            Gets/sets the page set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PageBlocks">
+            <summary>
+            Gets/sets the page block set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PageComments">
+            <summary>
+            Gets/sets the page comments.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PageFields">
+            <summary>
+            Gets/sets the page field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PagePermissions">
+            <summary>
+            Gets/sets the page permission set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PageRevisions">
+            <summary>
+            Gets/sets the page revision set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PageTypes">
+            <summary>
+            Gets/sets the page type set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Params">
+            <summary>
+            Gets/sets the param set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Posts">
+            <summary>
+            Gets/sets the post set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PostBlocks">
+            <summary>
+            Gets/sets the post block set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PostComments">
+            <summary>
+            Gets/sets the post comments.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PostFields">
+            <summary>
+            Gets/sets the post field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PostPermissions">
+            <summary>
+            Gets/sets the post permission set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PostRevisions">
+            <summary>
+            Gets/sets the post revision set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PostTags">
+            <summary>
+            Gets/sets the post tag set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.PostTypes">
+            <summary>
+            Gets/sets the post type set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Sites">
+            <summary>
+            Gets/sets the site set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.SiteFields">
+            <summary>
+            Gets/sets the site field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.SiteTypes">
+            <summary>
+            Gets/sets the site type set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Tags">
+            <summary>
+            Gets/sets the tag set.
+            </summary>
+        </member>
+        <member name="P:Piranha.Db`1.Taxonomies">
+            <summary>
+            Gets/sets the taxonomy set.
+            </summary>
+        </member>
+        <member name="M:Piranha.Db`1.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{`0})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="options">Configuration options</param>
+        </member>
+        <member name="M:Piranha.Db`1.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Creates and configures the data model.
+            </summary>
+            <param name="mb">The current model builder</param>
+        </member>
+        <member name="M:Piranha.Db`1.Seed">
+            <summary>
+            Seeds the default data.
+            </summary>
+        </member>
+        <member name="T:Piranha.IDb">
+            <summary>
+            Interface for the Piranha Db Context.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Aliases">
+            <summary>
+            Gets/sets the alias set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Blocks">
+            <summary>
+            Gets/sets the block set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.BlockFields">
+            <summary>
+            Gets/sets the block field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Categories">
+            <summary>
+            Gets/sets the category set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Content">
+            <summary>
+            Gets/sets the content set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.ContentFields">
+            <summary>
+            Gets/sets the content field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.ContentFieldTranslations">
+            <summary>
+            Gets/sets the content field translation set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.ContentTaxonomies">
+            <summary>
+            Gets/sets the content taxonomy set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.ContentTranslations">
+            <summary>
+            Gets/sets the content translation set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.ContentGroups">
+            <summary>
+            Gets/sets the content group set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.ContentTypes">
+            <summary>
+            Gets/sets the content type set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Languages">
+            <summary>
+            Gets/sets the language set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Media">
+            <summary>
+            Gets/sets the media set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.MediaFolders">
+            <summary>
+            Gets/sets the media folder set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.MediaVersions">
+            <summary>
+            Gets/sets the media version set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Pages">
+            <summary>
+            Gets/sets the page set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PageBlocks">
+            <summary>
+            Gets/sets the page block set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PageComments">
+            <summary>
+            Gets/sets the page comments.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PageFields">
+            <summary>
+            Gets/sets the page field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PagePermissions">
+            <summary>
+            Gets/sets the page permission set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PageRevisions">
+            <summary>
+            Gets/sets the page revision set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PageTypes">
+            <summary>
+            Gets/sets the page type set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Params">
+            <summary>
+            Gets/sets the param set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Posts">
+            <summary>
+            Gets/sets the post set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PostBlocks">
+            <summary>
+            Gets/sets the post block set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PostComments">
+            <summary>
+            Gets/sets the post comments.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PostFields">
+            <summary>
+            Gets/sets the post field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PostPermissions">
+            <summary>
+            Gets/sets the post permission set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PostRevisions">
+            <summary>
+            Gets/sets the post revision set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PostTags">
+            <summary>
+            Gets/sets the post tag set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.PostTypes">
+            <summary>
+            Gets/sets the post type set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Sites">
+            <summary>
+            Gets/sets the site set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.SiteFields">
+            <summary>
+            Gets/sets the site field set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.SiteTypes">
+            <summary>
+            Gets/sets the site type set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Tags">
+            <summary>
+            Gets/sets the tag set.
+            </summary>
+        </member>
+        <member name="P:Piranha.IDb.Taxonomies">
+            <summary>
+            Gets/sets the taxonomy set.
+            </summary>
+        </member>
+        <member name="M:Piranha.IDb.Set``1">
+            <summary>
+            Gets the entity set for the specified type.
+            </summary>
+        </member>
+        <member name="M:Piranha.IDb.SaveChanges">
+            <summary>
+            Saves the changes made to the context.
+            </summary>
+        </member>
+        <member name="M:Piranha.IDb.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Saves the changes made to the context.
+            </summary>
+        </member>
+        <member name="M:Piranha.Repositories.AliasRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db context</param>
+        </member>
+        <member name="M:Piranha.Repositories.AliasRepository.GetAll(System.Guid)">
+            <summary>
+            Gets all available models for the specified site.
+            </summary>
+            <param name="siteId">The site id</param>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.AliasRepository.GetById(System.Guid)">
+            <summary>
+            Gets the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The model, or NULL if it doesn't exist</returns>
+        </member>
+        <member name="M:Piranha.Repositories.AliasRepository.GetByAliasUrl(System.String,System.Guid)">
+            <summary>
+            Gets the model with the given alias url.
+            </summary>
+            <param name="url">The unique url</param>
+            <param name="siteId">The site id</param>
+            <returns>The model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.AliasRepository.GetByRedirectUrl(System.String,System.Guid)">
+            <summary>
+            Gets the model with the given redirect url.
+            </summary>
+            <param name="url">The unique url</param>
+            <param name="siteId">The site id</param>
+            <returns>The model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.AliasRepository.Save(Piranha.Models.Alias)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.AliasRepository.Delete(System.Guid)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="F:Piranha.Repositories.ArchiveRepository._db">
+            <summary>
+            The current db context.
+            </summary>
+        </member>
+        <member name="M:Piranha.Repositories.ArchiveRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default internal constructor.
+            </summary>
+            <param name="db">The current db context</param>
+        </member>
+        <member name="M:Piranha.Repositories.ContentGroupRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db connection</param>
+        </member>
+        <member name="M:Piranha.Repositories.ContentGroupRepository.GetAllAsync">
+            <summary>
+            Gets all available models.
+            </summary>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.ContentGroupRepository.GetByIdAsync(System.String)">
+            <summary>
+            Gets the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Repositories.ContentGroupRepository.SaveAsync(Piranha.Models.ContentGroup)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.ContentGroupRepository.DeleteAsync(System.String)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.ContentRepository.#ctor(Piranha.IDb,Piranha.Services.IContentServiceFactory)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db connection</param>
+            <param name="factory">The content service factory</param>
+        </member>
+        <member name="M:Piranha.Repositories.ContentRepository.GetAll(System.String)">
+            <summary>
+            Gets all of the available content for the optional
+            group id.
+            </summary>
+            <param name="groupId">The optional group id</param>
+            <returns>The available content</returns>
+        </member>
+        <member name="M:Piranha.Repositories.ContentRepository.GetById``1(System.Guid,System.Guid)">
+            <summary>
+            Gets the content model with the specified id.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="id">The unique id</param>
+            <param name="languageId">The selected language id</param>
+            <returns>The content model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.ContentRepository.Save``1(``0,System.Guid)">
+            <summary>
+            Saves the given content model
+            </summary>
+            <param name="model">The content model</param>
+            <param name="languageId">The selected language id</param>
+        </member>
+        <member name="M:Piranha.Repositories.ContentRepository.Delete(System.Guid)">
+            <summary>
+            Deletes the content model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.ContentRepository.GetQuery">
+            <summary>
+            Gets the base query for content.
+            </summary>
+            <returns>The queryable</returns>
+        </member>
+        <member name="M:Piranha.Repositories.ContentTypeRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db connection</param>
+        </member>
+        <member name="M:Piranha.Repositories.ContentTypeRepository.GetAll">
+            <summary>
+            Gets all available models.
+            </summary>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.ContentTypeRepository.GetByGroup(System.String)">
+            <summary>
+            Gets all available models from the specified group.
+            </summary>
+            <param name="group">The content group</param>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.ContentTypeRepository.GetById(System.String)">
+            <summary>
+            Gets the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Repositories.ContentTypeRepository.Save(Piranha.Models.ContentType)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.ContentTypeRepository.Delete(System.String)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.LanguageRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db context</param>
+        </member>
+        <member name="M:Piranha.Repositories.LanguageRepository.GetAll">
+            <summary>
+            Gets all available models.
+            </summary>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.LanguageRepository.GetById(System.Guid)">
+            <summary>
+            Gets the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The model, or null if it doesn't exist</returns>
+        </member>
+        <member name="M:Piranha.Repositories.LanguageRepository.GetDefault">
+            <summary>
+            Gets the default side.
+            </summary>
+            <returns>The modell</returns>
+        </member>
+        <member name="M:Piranha.Repositories.LanguageRepository.Save(Piranha.Models.Language)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.LanguageRepository.Delete(System.Guid)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db context</param>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.GetAll(System.Nullable{System.Guid})">
+            <summary>
+            Gets all media available in the specified folder.
+            </summary>
+            <param name="folderId">The optional folder id</param>
+            <returns>The available media</returns>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.CountAll(System.Nullable{System.Guid})">
+            <summary>
+            <inheritdoc cref="M:Piranha.Repositories.IMediaRepository.CountAll(System.Nullable{System.Guid})"/>
+            </summary>
+            <param name="folderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.GetAllFolders(System.Nullable{System.Guid})">
+            <summary>
+            Gets all media folders available in the specified
+            folder.
+            </summary>
+            <param name="folderId">The optional folder id</param>
+            <returns>The available media folders</returns>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.GetById(System.Guid[])">
+            <summary>
+            Get media for all Ids in this enumerable.
+            </summary>
+            <param name="ids">One or several media id</param>
+            <returns>The matching media</returns>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.GetById(System.Guid)">
+            <summary>
+            Gets the media with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The media</returns>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.GetFolderById(System.Guid)">
+            <summary>
+            Gets the media folder with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The media folder</returns>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.GetStructure">
+            <summary>
+            Gets the hierachical media structure.
+            </summary>
+            <returns>The media structure</returns>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.Save(Piranha.Models.Media)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model to save</param>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.SaveFolder(Piranha.Models.MediaFolder)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.Move(Piranha.Models.Media,System.Nullable{System.Guid})">
+            <summary>
+            Moves the media to the folder with the specified id.
+            </summary>
+            <param name="model">The model</param>
+            <param name="folderId">The folder id</param>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.Delete(System.Guid)">
+            <summary>
+            Deletes the media with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.DeleteFolder(System.Guid)">
+            <summary>
+            Deletes the media folder with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.MediaRepository.Sort(System.Collections.Generic.IEnumerable{Piranha.Data.MediaFolder},System.Collections.Generic.IList{Piranha.Repositories.MediaRepository.FolderCount},System.Nullable{System.Guid},System.Int32)">
+            <summary>
+            Sorts the items.
+            </summary>
+            <param name="folders">The full folder list</param>
+            <param name="count">The list of item count</param>
+            <param name="parentId">The current parent id</param>
+            <param name="level">The current level in the structure</param>
+            <returns>The structure</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.#ctor(Piranha.IDb,Piranha.Services.IContentServiceFactory)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db context</param>
+            <param name="factory">The content service factory</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetAll(System.Guid)">
+            <summary>
+            Gets all of the available pages for the current site.
+            </summary>
+            <param name="siteId">The site id</param>
+            <returns>The pages</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetAllBlogs(System.Guid)">
+            <summary>
+            Gets the available blog pages for the current site.
+            </summary>
+            <param name="siteId">The site id</param>
+            <returns>The pages</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetAllDrafts(System.Guid)">
+            <summary>
+            Gets the id of all pages that have a draft for
+            the specified site.
+            </summary>
+            <param name="siteId">The unique site id</param>
+            <returns>The pages that have a draft</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetAllComments(System.Nullable{System.Guid},System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Gets the comments available for the page with the specified id. If no page id
+            is provided all comments are fetched.
+            </summary>
+            <param name="pageId">The unique post id</param>
+            <param name="onlyApproved">If only approved comments should be fetched</param>
+            <param name="page">The page number</param>
+            <param name="pageSize">The page size</param>
+            <returns>The available comments</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetAllPendingComments(System.Nullable{System.Guid},System.Int32,System.Int32)">
+            <summary>
+            Gets the pending comments available for the page with the specified id.
+            </summary>
+            <param name="pageId">The unique page id</param>
+            <param name="page">The page number</param>
+            <param name="pageSize">The page size</param>
+            <returns>The available comments</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetStartpage``1(System.Guid)">
+            <summary>
+            Gets the site startpage.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="siteId">The site id</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetById``1(System.Guid)">
+            <summary>
+            Gets the page model with the specified id.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="id">The unique id</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetByIds``1(System.Guid[])">
+            <summary>
+            Gets the page models with the specified id's.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="ids">The unique id's</param>
+            <returns>The page models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetBySlug``1(System.String,System.Guid)">
+            <summary>
+            Gets the page model with the specified slug.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="slug">The unique slug</param>
+            <param name="siteId">The site id</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetDraftById``1(System.Guid)">
+            <summary>
+            Gets the draft for the page model with the specified id.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="id">The unique id</param>
+            <returns>The draft, or null if no draft exists</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.Move``1(``0,System.Nullable{System.Guid},System.Int32)">
+            <summary>
+            Moves the current page in the structure.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="model">The page to move</param>
+            <param name="parentId">The new parent id</param>
+            <param name="sortOrder">The new sort order</param>
+            <returns>The other pages that were affected by the move</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetCommentById(System.Guid)">
+            <summary>
+            Gets the comment with the given id.
+            </summary>
+            <param name="id">The comment id</param>
+            <returns>The model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.Save``1(``0)">
+            <summary>
+            Saves the given page model
+            </summary>
+            <param name="model">The page model</param>
+            <returns>The other pages that were affected by the move</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.SaveDraft``1(``0)">
+            <summary>
+            Saves the given model as a draft revision.
+            </summary>
+            <param name="model">The page model</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.SaveComment(System.Guid,Piranha.Models.Comment)">
+            <summary>
+            Saves the comment.
+            </summary>
+            <param name="pageId">The unique page id</param>
+            <param name="model">The comment model</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.CreateRevision(System.Guid,System.Int32)">
+            <summary>
+            Creates a revision from the current version
+            of the page with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <param name="revisions">The maximum number of revisions that should be stored</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.Delete(System.Guid)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.DeleteDraft(System.Guid)">
+            <summary>
+            Deletes the current draft revision for the page
+            with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.DeleteComment(System.Guid)">
+            <summary>
+            Deletes the comment with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetAllComments(System.Nullable{System.Guid},System.Boolean,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Gets the comments available for the page with the specified id. If no page id
+            is provided all comments are fetched.
+            </summary>
+            <param name="pageId">The unique page id</param>
+            <param name="onlyApproved">If only approved comments should be fetched</param>
+            <param name="onlyPending">If only pending comments should be fetched</param>
+            <param name="page">The page number</param>
+            <param name="pageSize">The page size</param>
+            <returns>The available comments</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.Save``1(``0,System.Boolean)">
+            <summary>
+            Saves the given page model
+            </summary>
+            <param name="model">The page model</param>
+            <param name="isDraft">If the model should be saved as a draft</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.GetQuery``1">
+            <summary>
+            Gets the base query for loading pages.
+            </summary>
+            <typeparam name="T">The requested model type</typeparam>
+            <returns>The queryable</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.ProcessAsync``1(Piranha.Data.Page,``0)">
+            <summary>
+            Performs additional processing and loads related models.
+            </summary>
+            <param name="page">The source page</param>
+            <param name="model">The targe model</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageRepository.MovePages(System.Collections.Generic.IList{Piranha.Data.Page},System.Guid,System.Guid,System.Int32,System.Boolean)">
+            <summary>
+            Moves the pages around. This is done when a page is deleted or moved in the structure.
+            </summary>
+            <param name="pages">The pages</param>
+            <param name="pageId">The id of the page that is moved</param>
+            <param name="siteId">The site id</param>
+            <param name="sortOrder">The sort order</param>
+            <param name="increase">If sort order should be increase or decreased</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageTypeRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db connection</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageTypeRepository.GetAll">
+            <summary>
+            Gets all available models.
+            </summary>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageTypeRepository.GetById(System.String)">
+            <summary>
+            Gets the model with the specified id.
+            </summary>
+            <param name="id">The unique i</param>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Repositories.PageTypeRepository.Save(Piranha.Models.PageType)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.PageTypeRepository.Delete(System.String)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.ParamRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db context</param>
+        </member>
+        <member name="M:Piranha.Repositories.ParamRepository.GetAll">
+            <summary>
+            Gets all available models.
+            </summary>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.ParamRepository.GetById(System.Guid)">
+            <summary>
+            Gets the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The model, or NULL if it doesn't exist</returns>
+        </member>
+        <member name="M:Piranha.Repositories.ParamRepository.GetByKey(System.String)">
+            <summary>
+            Gets the model with the given key.
+            </summary>
+            <param name="key">The unique key</param>
+            <returns>The model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.ParamRepository.Save(Piranha.Models.Param)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.ParamRepository.Delete(System.Guid)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.#ctor(Piranha.IDb,Piranha.Services.IContentServiceFactory)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db connection</param>
+            <param name="factory">The current content service factory</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetAll(System.Guid,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets the available posts for the specified archive.
+            </summary>
+            <param name="blogId">The blog id</param>
+            <param name="index">The optional page to fetch</param>
+            <param name="pageSize">The optional page size</param>
+            <returns>The posts</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetAllBySiteId(System.Guid)">
+            <summary>
+            Gets the available post items for the given site.
+            </summary>
+            <param name="siteId">The site id</param>
+            <returns>The posts</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetAllCategories(System.Guid)">
+            <summary>
+            Gets all available categories for the specified blog.
+            </summary>
+            <param name="blogId">The blog id</param>
+            <returns>The available categories</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetAllTags(System.Guid)">
+            <summary>
+            Gets all available tags for the specified blog.
+            </summary>
+            <param name="blogId">The blog id</param>
+            <returns>The available tags</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetAllDrafts(System.Guid)">
+            <summary>
+            Gets the id of all posts that have a draft for
+            the specified blog.
+            </summary>
+            <param name="blogId">The unique blog id</param>
+            <returns>The posts that have a draft</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetAllComments(System.Nullable{System.Guid},System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Gets the comments available for the post with the specified id. If no post id
+            is provided all comments are fetched.
+            </summary>
+            <param name="postId">The unique post id</param>
+            <param name="onlyApproved">If only approved comments should be fetched</param>
+            <param name="page">The page number</param>
+            <param name="pageSize">The page size</param>
+            <returns>The available comments</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetAllPendingComments(System.Nullable{System.Guid},System.Int32,System.Int32)">
+            <summary>
+            Gets the pending comments available for the post with the specified id.
+            </summary>
+            <param name="postId">The unique post id</param>
+            <param name="page">The page number</param>
+            <param name="pageSize">The page size</param>
+            <returns>The available comments</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetById``1(System.Guid)">
+            <summary>
+            Gets the post model with the specified id.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="id">The unique id</param>
+            <returns>The post model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetBySlug``1(System.Guid,System.String)">
+            <summary>
+            Gets the post model with the specified slug.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="blogId">The blog id</param>
+            <param name="slug">The unique slug</param>
+            <returns>The post model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetDraftById``1(System.Guid)">
+            <summary>
+            Gets the draft for the page model with the specified id.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="id">The unique id</param>
+            <returns>The draft, or null if no draft exists</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetCount(System.Guid)">
+            <summary>
+            Gets the number of available posts in the specified archive.
+            </summary>
+            <param name="archiveId">The archive id</param>
+            <returns>The number of posts</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetCategoryBySlug(System.Guid,System.String)">
+            <summary>
+            Gets the category with the given slug.
+            </summary>
+            <param name="blogId">The blog id</param>
+            <param name="slug">The unique slug</param>
+            <returns>The category</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetCategoryById(System.Guid)">
+            <summary>
+            Gets the category with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The category</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetTagBySlug(System.Guid,System.String)">
+            <summary>
+            Gets the tag with the given slug.
+            </summary>
+            <param name="blogId">The blog id</param>
+            <param name="slug">The unique slug</param>
+            <returns>The tag</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetTagById(System.Guid)">
+            <summary>
+            Gets the tag with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The category</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetCommentById(System.Guid)">
+            <summary>
+            Gets the comment with the given id.
+            </summary>
+            <param name="id">The comment id</param>
+            <returns>The model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.Save``1(``0)">
+            <summary>
+            Saves the given post model
+            </summary>
+            <param name="model">The post model</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.SaveDraft``1(``0)">
+            <summary>
+            Saves the given model as a draft revision.
+            </summary>
+            <param name="model">The post model</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.SaveComment(System.Guid,Piranha.Models.Comment)">
+            <summary>
+            Saves the comment.
+            </summary>
+            <param name="postId">The unique post id</param>
+            <param name="model">The comment model</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.CreateRevision(System.Guid,System.Int32)">
+            <summary>
+            Creates a revision from the current version
+            of the page with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+            <param name="revisions">The maximum number of revisions that should be stored</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.Delete(System.Guid)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.DeleteDraft(System.Guid)">
+            <summary>
+            Deletes the current draft revision for the page
+            with the given id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.DeleteComment(System.Guid)">
+            <summary>
+            Deletes the comment with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetAllComments(System.Nullable{System.Guid},System.Boolean,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Gets the comments available for the post with the specified id. If no post id
+            is provided all comments are fetched.
+            </summary>
+            <param name="postId">The unique post id</param>
+            <param name="onlyApproved">If only approved comments should be fetched</param>
+            <param name="onlyPending">If only pending comments should be fetched</param>
+            <param name="page">The page number</param>
+            <param name="pageSize">The page size</param>
+            <returns>The available comments</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.Save``1(``0,System.Boolean)">
+            <summary>
+            Saves the given post model
+            </summary>
+            <param name="model">The post model</param>
+            <param name="isDraft">If the model should be saved as a draft</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.DeleteUnusedCategories(System.Guid)">
+            <summary>
+            Deletes all unused categories for the specified blog.
+            </summary>
+            <param name="blogId">The blog id</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.DeleteUnusedTags(System.Guid)">
+            <summary>
+            Deletes all unused tags for the specified blog.
+            </summary>
+            <param name="blogId">The blog id</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.GetQuery``1">
+            <summary>
+            Gets the base query for loading posts.
+            </summary>
+            <typeparam name="T">The requested model type</typeparam>
+            <returns>The queryable</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostRepository.ProcessAsync``1(Piranha.Data.Post,``0)">
+            <summary>
+            Performs additional processing and loads related models.
+            </summary>
+            <param name="post">The source post</param>
+            <param name="model">The targe model</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostTypeRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db connection</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostTypeRepository.GetAll">
+            <summary>
+            Gets all available models.
+            </summary>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostTypeRepository.GetById(System.String)">
+            <summary>
+            Gets the model with the specified id.
+            </summary>
+            <param name="id">The unique i</param>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Repositories.PostTypeRepository.Save(Piranha.Models.PostType)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.PostTypeRepository.Delete(System.String)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.#ctor(Piranha.IDb,Piranha.Services.IContentServiceFactory)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db context</param>
+            <param name="factory">The content service factory</param>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.GetAll">
+            <summary>
+            Gets all available models.
+            </summary>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.GetById(System.Guid)">
+            <summary>
+            Gets the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+            <returns>The model, or NULL if it doesn't exist</returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.GetByInternalId(System.String)">
+            <summary>
+            Gets the model with the given internal id.
+            </summary>
+            <param name="internalId">The unique internal i</param>
+            <returns>The model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.GetDefault">
+            <summary>
+            Gets the default side.
+            </summary>
+            <returns>The modell, or NULL if it doesnt exist</returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.GetContentById(System.Guid)">
+            <summary>
+            Gets the site content for given site id.
+            </summary>
+            <param name="id">Site id</param>
+            <returns>The site content model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.GetContentById``1(System.Guid)">
+            <summary>
+            Gets the site content for given site id.
+            </summary>
+            <param name="id">Site id</param>
+            <typeparam name="T">The site model type</typeparam>
+            <returns>The site content model</returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.GetSitemap(System.Guid,System.Boolean)">
+            <summary>
+            Gets the hierachical sitemap structure.
+            </summary>
+            <param name="id">The optional site id</param>
+            <param name="onlyPublished">If only published items should be included</param>
+            <returns>The sitemap</returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.Save(Piranha.Models.Site)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.SaveContent``1(System.Guid,``0)">
+            <summary>
+            Saves the given site content to the site with the
+            given id.
+            </summary>
+            <param name="siteId">The site id</param>
+            <param name="content">The site content</param>
+            <typeparam name="T">The site content type</typeparam>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.Delete(System.Guid)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Repositories.SiteRepository.Sort(System.Collections.Generic.IEnumerable{Piranha.Data.Page},System.Nullable{System.Guid},System.Int32)">
+            <summary>
+            Sorts the items.
+            </summary>
+            <param name="pages">The full page list</param>
+            <param name="parentId">The current parent id</param>
+            <param name="level">The level in structure</param>
+            <returns>The sitemap</returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteTypeRepository.#ctor(Piranha.IDb)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="db">The current db connection</param>
+        </member>
+        <member name="M:Piranha.Repositories.SiteTypeRepository.GetAll">
+            <summary>
+            Gets all available models.
+            </summary>
+            <returns>The available models</returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteTypeRepository.GetById(System.String)">
+            <summary>
+            Gets the model with the specified id.
+            </summary>
+            <param name="id">The unique i</param>
+            <returns></returns>
+        </member>
+        <member name="M:Piranha.Repositories.SiteTypeRepository.Save(Piranha.Models.SiteType)">
+            <summary>
+            Adds or updates the given model in the database
+            depending on its state.
+            </summary>
+            <param name="model">The model</param>
+        </member>
+        <member name="M:Piranha.Repositories.SiteTypeRepository.Delete(System.String)">
+            <summary>
+            Deletes the model with the specified id.
+            </summary>
+            <param name="id">The unique id</param>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.#ctor(Piranha.Services.IContentFactory,AutoMapper.IMapper)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="factory">The content factory</param>
+            <param name="mapper">The AutoMapper instance to use</param>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.TransformAsync``1(`0,Piranha.Models.ContentTypeBase,System.Func{`0,``0,System.Threading.Tasks.Task},System.Nullable{System.Guid})">
+            <summary>
+            Loads the given data into a new model.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="content">The content entity</param>
+            <param name="type">The content type</param>
+            <param name="process">Optional func that should be called after transformation</param>
+            <param name="languageId">The optional language id</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.Transform``1(``0,Piranha.Models.ContentTypeBase,`0,System.Nullable{System.Guid})">
+            <summary>
+            Transforms the given model into content data.
+            </summary>
+            <param name="model">The model</param>
+            <param name="type">The conten type</param>
+            <param name="dest">The optional dest object</param>
+            <param name="languageId">The optional language id</param>
+            <returns>The content data</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.TransformBlocks(System.Collections.Generic.IEnumerable{Piranha.Data.Block})">
+            <summary>
+            Transforms the given block data into block models.
+            </summary>
+            <param name="blocks">The data</param>
+            <returns>The transformed blocks</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.TransformBlocks(System.Collections.Generic.IList{Piranha.Extend.Block})">
+            <summary>
+            Transforms the given blocks to the internal data model.
+            </summary>
+            <param name="models">The blocks</param>
+            <returns>The data model</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.GetEnumerable``1(``0,System.String)">
+            <summary>
+            Gets the enumerator for the given region collection.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="model">The model</param>
+            <param name="regionId">The region id</param>
+            <returns>The enumerator</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.GetRegion``1(``0,System.String)">
+            <summary>
+            Gets the region with the given key.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="model">The model</param>
+            <param name="regionId">The region id</param>
+            <returns>The region</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.HasRegion``1(``0,System.String)">
+            <summary>
+            Checks if the given model has a region with the specified id.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="model">The model</param>
+            <param name="regionId">The region id</param>
+            <returns>If the region exists</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.MapRegion(`0,System.Object,Piranha.Models.ContentTypeRegion,System.String,System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Maps a region to the given data entity.
+            </summary>
+            <param name="content">The content entity</param>
+            <param name="region">The region to map</param>
+            <param name="regionType">The region type</param>
+            <param name="regionId">The region id</param>
+            <param name="sortOrder">The optional sort order</param>
+            <param name="languageId">The optional language id</param>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.SetSimpleValue``1(``0,System.String,`1,System.Nullable{System.Guid})">
+            <summary>
+            Sets the value of a simple single field region.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="model">The model</param>
+            <param name="regionId">The region id</param>
+            <param name="field">The field</param>
+            <param name="languageId">The languageId</param>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.AddSimpleValue``1(``0,System.String,`1,System.Nullable{System.Guid})">
+            <summary>
+            Adds a simple single field value to a collection region.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="model">The model</param>
+            <param name="regionId">The region id</param>
+            <param name="field">The field</param>
+            <param name="languageId">The languageId</param>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.SetComplexValue``1(``0,System.String,System.String,`1,System.Nullable{System.Guid})">
+            <summary>
+            Sets the value of a complex region.
+            </summary>
+            <typeparam name="T">The model</typeparam>
+            <param name="model">The model</param>
+            <param name="regionId">The region id</param>
+            <param name="fieldId">The field id</param>
+            <param name="field">The field</param>
+            <param name="languageId">The languageId</param>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.AddComplexValueAsync``1(``0,Piranha.Models.ContentTypeBase,System.String,System.Collections.Generic.IList{`1},System.Nullable{System.Guid})">
+            <summary>
+            Adds a complex region to a collection region.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="model">The model</param>
+            <param name="contentType">The content type</param>
+            <param name="regionId">The region id</param>
+            <param name="fields">The field</param>
+            <param name="languageId">The languageId</param>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.DeserializeValue(`1,System.Nullable{System.Guid})">
+            <summary>
+            Deserializes the given field value.
+            </summary>
+            <param name="field">The page field</param>
+            <param name="languageId">The optional language id</param>
+            <returns>The value</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentService`3.GetComplexValue(System.Object,System.String)">
+            <summary>
+            Gets a field value from a complex region.
+            </summary>
+            <param name="region">The region</param>
+            <param name="fieldId">The field id</param>
+            <returns>The value</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentServiceFactory.#ctor(Piranha.Services.IContentFactory)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="factory">The content factory</param>
+        </member>
+        <member name="M:Piranha.Services.ContentServiceFactory.Create``3(AutoMapper.IMapper)">
+            <summary>
+            Creates a new content service for the specified types.
+            </summary>
+            <param name="mapper">The AutoMapper instance to use for transformation</param>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentServiceFactory.CreateContentService">
+            <summary>
+            Creates a new content service.
+            </summary>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentServiceFactory.CreatePageService">
+            <summary>
+            Creates a new page content service.
+            </summary>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentServiceFactory.CreatePostService">
+            <summary>
+            Creates a new post content service.
+            </summary>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:Piranha.Services.ContentServiceFactory.CreateSiteService">
+            <summary>
+            Creates a new site content service.
+            </summary>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:Piranha.Services.IContentService`3.TransformAsync``1(`0,Piranha.Models.ContentTypeBase,System.Func{`0,``0,System.Threading.Tasks.Task},System.Nullable{System.Guid})">
+            <summary>
+            Transforms the given data into a new model.
+            </summary>
+            <typeparam name="T">The model type</typeparam>
+            <param name="content">The content entity</param>
+            <param name="type">The content type</param>
+            <param name="process">Optional func that should be called after transformation</param>
+            <param name="languageId">The optional language id</param>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.Services.IContentService`3.Transform``1(``0,Piranha.Models.ContentTypeBase,`0,System.Nullable{System.Guid})">
+            <summary>
+            Transforms the given model into content data.
+            </summary>
+            <param name="model">The model</param>
+            <param name="type">The conten type</param>
+            <param name="dest">The optional dest object</param>
+            <param name="languageId">The optional language id</param>
+            <returns>The content data</returns>
+        </member>
+        <member name="M:Piranha.Services.IContentService`3.TransformBlocks(System.Collections.Generic.IEnumerable{Piranha.Data.Block})">
+            <summary>
+            Transforms the given block data into block models.
+            </summary>
+            <param name="blocks">The data</param>
+            <returns>The transformed blocks</returns>
+        </member>
+        <member name="M:Piranha.Services.IContentService`3.TransformBlocks(System.Collections.Generic.IList{Piranha.Extend.Block})">
+            <summary>
+            Transforms the given blocks to the internal data model.
+            </summary>
+            <param name="models">The blocks</param>
+            <returns>The data model</returns>
+        </member>
+        <member name="M:Piranha.Services.IContentServiceFactory.Create``3(AutoMapper.IMapper)">
+            <summary>
+            Creates a new content service for the specified types.
+            </summary>
+            <param name="mapper">The AutoMapper instance to use for transformation</param>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:Piranha.Services.IContentServiceFactory.CreateContentService">
+            <summary>
+            Creates a new content service.
+            </summary>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:Piranha.Services.IContentServiceFactory.CreatePageService">
+            <summary>
+            Creates a new page content service.
+            </summary>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:Piranha.Services.IContentServiceFactory.CreatePostService">
+            <summary>
+            Creates a new post content service.
+            </summary>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:Piranha.Services.IContentServiceFactory.CreateSiteService">
+            <summary>
+            Creates a new site content service.
+            </summary>
+            <returns>The content service</returns>
+        </member>
+        <member name="M:PiranhaEFExtensions.UseEF``1(Piranha.PiranhaServiceBuilder,System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder},System.Int32,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Adds the DbContext and the default services needed to run
+            Piranha over Entity Framework Core.
+            </summary>
+            <param name="serviceBuilder">The current service builder</param>
+            <param name="dboptions">The DbContext options builder</param>
+            <param name="poolSize">The optional connection pool size. Default value is 128</param>
+            <param name="scope">The optional lifetime</param>
+            <typeparam name="T">The DbContext type</typeparam>
+            <returns>The updated service collection</returns>
+        </member>
+        <member name="M:PiranhaEFExtensions.AddPiranhaEF``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder},System.Int32,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Adds the DbContext and the default services needed to run
+            Piranha over Entity Framework Core.
+            </summary>
+            <param name="services">The current service collection</param>
+            <param name="dboptions">The DbContext options builder</param>
+            <param name="poolSize">The optional connection pool size. Default value is 128</param>
+            <param name="scope">The optional lifetime</param>
+            <typeparam name="T">The DbContext type</typeparam>
+            <returns>The updated service collection</returns>
+        </member>
+        <member name="M:PiranhaEFExtensions.RegisterServices``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Adds the default services needed to run Piranha over
+            Entity Framework Core.
+            </summary>
+            <param name="services">The current service collection</param>
+            <param name="scope">The optional lifetime</param>
+            <typeparam name="T">The DbContext type</typeparam>
+            <returns>The updated service collection</returns>
+        </member>
+    </members>
+</doc>

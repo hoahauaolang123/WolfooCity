@@ -1,0 +1,146 @@
+﻿@page "/quan-ly-kh/"
+@model Piranha.Manager.Areas.Manager.Pages.Qlv_KhachHangModel
+@{
+}
+<div id="formview search-box">
+    <div class="card m-3">
+        <h4> Quản lý khách hàng</h4>
+        <div class="row">
+
+            <div class="form-group col-3">
+                @Html.Label("Số điện thoại")
+                @Html.TextBox("SoDienThoai", null, new { @class = "form-control" })
+            </div>
+            <div class="form-group col-3">
+                @Html.Label("Họ và tên")
+                @Html.TextBox("HoTen", null, new { @class = "form-control" })
+            </div>
+             <div class="form-group col-3">
+                @Html.Label("Địa chỉ email")
+                @Html.TextBox("Email", null, new { @class = "form-control" })
+            </div>
+            <div class="form-group col-3" style="margin-top: 29px">
+                <span style="cursor:pointer;float:left" onclick="TimKiem()" class="btn btn-primary ml-2">Tìm kiếm</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <table id="tbl" width="100%" class="table table-bordered display">
+                <thead>
+                    <tr>
+                        <th class="bg-info">STT</th>
+                        <th class="bg-info">Số điện thoại</th>
+                        <th class="bg-info">Họ tên</th>
+                        <th class="bg-info">Địa chỉ email</th>
+                        <th class="bg-info">Lần mua cuối</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $("#LoaiVe").select2();
+    $("#TrangThai").select2();
+    var book = [
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 },
+        { name: 'a', pageCount: 14 }
+    ];
+    var tbl = $("#tbl").DataTable({
+        ordering: false,
+        serverSide: false,
+        processing: true,
+        searching: false,
+        data: book,
+        columns: [
+            {
+                data: "name",
+                className: "text-center",
+                render: function(data, type, row, meta) {
+                    var rowNum = meta.row + meta.settings._iDisplayStart + 1;
+                    return rowNum;
+                }
+            },
+            {
+                data: "name",
+            },
+            {
+                data: "name",
+                className: "text-center",
+
+            },
+            {
+                data: "name",
+                className: "text-center",
+
+            },
+            {
+                data: "name",
+                className: "text-center",
+
+            }
+        ]
+    })
+
+
+    function TimKiem() {
+        tbl.ajax.reload();
+    }
+    $('#NgayTaoVe').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        autoUpdateInput: false,
+        minYear: 1900,
+        locale: vn_daterangepicker
+    })
+    $('input[name="NgayTaoVe"]').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.endDate.format('DD/MM/YYYY'));
+    });
+    $('#NgayBanVe').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        autoUpdateInput: false,
+        minYear: 1900,
+        locale: vn_daterangepicker
+    })
+    $('input[name="NgayBanVe"]').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.endDate.format('DD/MM/YYYY'));
+    });
+    $('#SoDienThoai').keyup(function(e) {
+        if ((e.keyCode > 47 && e.keyCode < 58) || (e.keyCode < 106 && e.keyCode > 95)) {
+            this.value = this.value.replace(/(\d{3})\?/g, '$1-');
+            return true;
+        }
+        //remove all chars, except dash and digits
+        this.value = this.value.replace(/[^\-0-9]/g, '');
+    });
+</script>

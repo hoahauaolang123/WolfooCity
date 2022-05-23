@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.Data.EF.SQLServer</name>
+    </assembly>
+    <members>
+        <member name="T:Piranha.Data.EF.SQLServer.DbFactory">
+            <summary>
+            Factory for creating a db context. Only used in dev mode
+            when creating migrations.
+            </summary>
+        </member>
+        <member name="M:Piranha.Data.EF.SQLServer.DbFactory.CreateDbContext(System.String[])">
+            <summary>
+            Creates a new db context.
+            </summary>
+            <param name="args">The arguments</param>
+            <returns>The db context</returns>
+        </member>
+        <member name="M:Piranha.Data.EF.SQLServer.SQLServerDb.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Piranha.Data.EF.SQLServer.SQLServerDb})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="options">Configuration options</param>
+        </member>
+    </members>
+</doc>

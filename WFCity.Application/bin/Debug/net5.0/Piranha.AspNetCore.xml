@@ -1,0 +1,1180 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.AspNetCore</name>
+    </assembly>
+    <members>
+        <member name="T:PiranhaHtmlExtensions">
+            <summary>
+            Extension class with html helper methods.
+            </summary>
+        </member>
+        <member name="M:PiranhaHtmlExtensions.CssName(Piranha.Extend.Block)">
+            <summary>
+            Converts the type name of the block into a pretty
+            css class name.
+            </summary>
+            <param name="block">The current block</param>
+            <returns>The css class name</returns>
+        </member>
+        <member name="M:PiranhaHtmlExtensions.MetaTags(Piranha.AspNetCore.Services.IApplicationService,Piranha.Models.IMeta,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Generates meta tags for the given content.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="content">The content</param>
+            <param name="meta">If meta tags should be generated</param>
+            <param name="opengraph">If open graph tags should be generated</param>
+            <param name="generator">If generator tag should be generated</param>
+            <returns>The meta tags</returns>
+        </member>
+        <member name="M:PiranhaHtmlExtensions.ClassNameToWebName(System.String)">
+            <summary>
+            Converts a standard camel case class name to a lowercase
+            string with each word separated with a dash, suitable
+            for use in views.
+            </summary>
+            <param name="str">The camel case string</param>
+            <returns>The converted string</returns>
+        </member>
+        <member name="T:PiranhaSecurityExtensions">
+            <summary>
+            Security extensions for simplifying authorization in
+            the client application.
+            </summary>
+        </member>
+        <member name="M:PiranhaSecurityExtensions.UseSecurity(Piranha.PiranhaServiceBuilder,System.Action{Piranha.AspNetCore.Security.SecurityBuilder})">
+            <summary>
+            Adds authorization with the given application policies to the aplication.
+            </summary>
+            <param name="builder">The service builder</param>
+            <param name="options">The security options</param>
+            <returns>The service builder</returns>
+        </member>
+        <member name="M:PiranhaSecurityExtensions.UseSecurityMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Adds the security middleware to the pipeline.
+            </summary>
+            <param name="builder">The current application builder</param>
+            <returns>The update builder</returns>
+        </member>
+        <member name="M:PiranhaSecurityExtensions.ForUserAsync(System.Collections.Generic.IEnumerable{Piranha.Models.SitemapItem},System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authorization.IAuthorizationService)">
+            <summary>
+            Filters the current sitemap collection to only include the items the
+            current user has access to. Please note that this only filters the
+            current collection, it doesn't filter the entire strucure.
+            </summary>
+            <param name="sitemap">The sitemap items</param>
+            <param name="user">The current user</param>
+            <param name="auth">The authorization service</param>
+            <returns>The filtered collection</returns>
+        </member>
+        <member name="T:PiranhaStartupExtensions">
+            <summary>
+            Extensions methods for setting up Piranha in Configure
+            and ConfigureServices.
+            </summary>
+        </member>
+        <member name="M:PiranhaStartupExtensions.AddPiranha(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Piranha.PiranhaServiceBuilder})">
+            <summary>
+            Adds the core Piranha services if simple startup is used.
+            </summary>
+            <param name="services">The current service collection</param>
+            <param name="options">The builder options</param>
+            <returns>The updated service collection</returns>
+        </member>
+        <member name="M:PiranhaStartupExtensions.UsePiranha(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{Piranha.AspNetCore.PiranhaApplicationBuilder})">
+            <summary>
+            Simple startup with integrated middleware that also adds common
+            dependencies needed for an integrated web application.
+            </summary>
+            <param name="builder">The application builder</param>
+            <param name="options">Action for configuring the builder</param>
+            <returns>The updated application builder</returns>
+        </member>
+        <member name="T:PiranhaUrlExtensions">
+            <summary>
+            Extension class with helper methods for generating
+            URL's for the default components.
+            </summary>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteUrl(Piranha.AspNetCore.Services.IApplicationService,Piranha.Models.PageBase)">
+            <summary>
+            Generates an absolute url for the given page.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="page">The page</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteUrl(Piranha.AspNetCore.Services.IApplicationService,Piranha.Extend.Blocks.PageBlock)">
+            <summary>
+            Generates an absolute url for the given page block.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="block">The block</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteUrl(Piranha.AspNetCore.Services.IApplicationService,Piranha.Extend.Fields.PageField)">
+            <summary>
+            Generates an absolute url for the given page field.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="field">The field</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteUrl(Piranha.AspNetCore.Services.IApplicationService,Piranha.Models.PostBase)">
+            <summary>
+            Generates an absolute url for the given post.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="post">The post</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteUrl(Piranha.AspNetCore.Services.IApplicationService,Piranha.Extend.Blocks.PostBlock)">
+            <summary>
+            Generates an absolute url for the given post block.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="block">The block</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteUrl(Piranha.AspNetCore.Services.IApplicationService,Piranha.Extend.Fields.PostField)">
+            <summary>
+            Generates an absolute url for the given post field.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="field">The field</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteUrl(Piranha.AspNetCore.Services.IApplicationService,Piranha.Models.Taxonomy)">
+            <summary>
+            Generates an absolute url for the given taxonomy in the
+            current archive.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="taxonomy">The taxonomy</param>
+            <returns></returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.Url(Piranha.AspNetCore.Services.IApplicationService,Piranha.Models.PageBase)">
+            <summary>
+            Generates a local url for the given page.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="page">The page</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.Url(Piranha.AspNetCore.Services.IApplicationService,Piranha.Extend.Blocks.PageBlock)">
+            <summary>
+            Generates a local url for the given page block.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="block">The block</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.Url(Piranha.AspNetCore.Services.IApplicationService,Piranha.Extend.Fields.PageField)">
+            <summary>
+            Generates a local url for the given page field.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="field">The field</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.Url(Piranha.AspNetCore.Services.IApplicationService,Piranha.Models.PostBase)">
+            <summary>
+            Generates a local url for the given post.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="post">The post</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.Url(Piranha.AspNetCore.Services.IApplicationService,Piranha.Extend.Blocks.PostBlock)">
+            <summary>
+            Generates a local url for the given post block.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="block">The block</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.Url(Piranha.AspNetCore.Services.IApplicationService,Piranha.Extend.Fields.PostField)">
+            <summary>
+            Generates a local url for the given post field.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="field">The field</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.Url(Piranha.AspNetCore.Services.IApplicationService,Piranha.Models.SitemapItem)">
+            <summary>
+            Generates a local url for the given sitemap item.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="item">The sitemap item</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.Url(Piranha.AspNetCore.Services.IApplicationService,Piranha.Models.Taxonomy)">
+            <summary>
+            Generates a local url for the given taxonomy in the
+            current archive.
+            </summary>
+            <param name="app">The application service</param>
+            <param name="taxonomy">The taxonomy</param>
+            <returns></returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.Url(Piranha.AspNetCore.Services.IApplicationService,System.String)">
+            <summary>
+            Generates a local url for the given slug.
+            </summary>
+            <param name="app">The current application service</param>
+            <param name="slug">The slug</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.ContentUrl(Piranha.AspNetCore.Services.IApplicationService,System.String)">
+            <summary>
+            Generates a local url for the given content.
+            </summary>
+            <param name="app">The current application service</param>
+            <param name="url">The content url</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteUrl(Piranha.AspNetCore.Services.IApplicationService,System.String)">
+            <summary>
+            Generates an absolute url for the given slug.
+            </summary>
+            <param name="app">The current application service</param>
+            <param name="slug">The slug</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteContentUrl(Piranha.AspNetCore.Services.IApplicationService,System.String)">
+            <summary>
+            Generates an absolute url for the given content.
+            </summary>
+            <param name="app">The current application service</param>
+            <param name="url">The content url</param>
+            <returns>The url</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.AbsoluteUrlStart(Piranha.AspNetCore.Services.IApplicationService)">
+            <summary>
+            Generates the scheme://host:port segment of the url from
+            the current application request.
+            </summary>
+            <param name="app">The current application service</param>
+            <returns>The url segment</returns>
+        </member>
+        <member name="M:PiranhaUrlExtensions.GenerateUrl(Piranha.AspNetCore.Services.IApplicationService,System.String,System.Boolean)">
+            <summary>
+            Generates a local url for the given slug.
+            </summary>
+            <param name="app">The current application service</param>
+            <param name="slug">The slug</param>
+            <param name="prefix">If site prefix should be appended</param>
+            <returns>The url</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Helpers.IMediaHelper">
+            <summary>
+            Helper for manipulating media files.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.IMediaHelper.ResizeImage(Piranha.Extend.Fields.ImageField,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Resizes the given image to the given dimensions.
+            </summary>
+            <param name="image">The image field</param>
+            <param name="width">The width</param>
+            <param name="height">The optional height</param>
+            <returns>The public URL of the resized image</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.IMediaHelper.ResizeImage(Piranha.Models.Media,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Resizes the given image to the given dimensions.
+            </summary>
+            <param name="image">The image</param>
+            <param name="width">The width</param>
+            <param name="height">The optional width</param>
+            <returns>The public URL of the resized image</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.IMediaHelper.ResizeImage(Piranha.Extend.Blocks.ImageBlock,System.Int32)">
+            <summary>
+            Resizes the given image block according to the
+            preferred aspect.
+            </summary>
+            <param name="block">The image block</param>
+            <param name="width">The width</param>
+            <returns>The public URL of the resized image</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Helpers.IRequestHelper">
+            <summary>
+            The request helper provides information regarding the
+            current request.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.IRequestHelper.Host">
+            <summary>
+            Gets/sets the current hostname.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.IRequestHelper.Port">
+            <summary>
+            Gets/sets the current port.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.IRequestHelper.Scheme">
+            <summary>
+            Gets/sets the current scheme.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.IRequestHelper.Url">
+            <summary>
+            Gets/sets the requested raw url.
+            </summary>
+        </member>
+        <member name="T:Piranha.AspNetCore.Helpers.ISiteHelper">
+            <summary>
+            Helper for accessing information about site in
+            the current request.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.ISiteHelper.Id">
+            <summary>
+            Gets/sets the id of the currently requested site.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.ISiteHelper.Culture">
+            <summary>
+            Gets/sets the optional culture of the requested site.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.ISiteHelper.Host">
+            <summary>
+            Gets/set the optional hostname of the requested site.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.ISiteHelper.SitePrefix">
+            <summary>
+            Gets/sets the optional site prefix of the requested site
+            if it's routed with `host/prefix`.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.ISiteHelper.Sitemap">
+            <summary>
+            Gets/sets the sitemap of the currently requested site.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.ISiteHelper.Description">
+            <summary>
+            Gets/sets the site description.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.ISiteHelper.GetContentAsync``1">
+            <summary>
+            Gets the site content for the current site.
+            </summary>
+            <typeparam name="T">The content type</typeparam>
+            <returns>The site content model</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Helpers.MediaHelper">
+            <summary>
+            Helper for manipulating media files.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.MediaHelper.#ctor(Piranha.IApi)">
+            <summary>
+            Default internal constructur.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.MediaHelper.ResizeImage(Piranha.Extend.Fields.ImageField,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Resizes the given image to the given dimensions.
+            </summary>
+            <param name="image">The image field</param>
+            <param name="width">The width</param>
+            <param name="height">The optional height</param>
+            <returns>The public URL of the resized image</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.MediaHelper.ResizeImage(Piranha.Models.Media,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Resizes the given image to the given dimensions.
+            </summary>
+            <param name="image">The image</param>
+            <param name="width">The width</param>
+            <param name="height">The optional width</param>
+            <returns>The public URL of the resized image</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.MediaHelper.ResizeImage(Piranha.Extend.Blocks.ImageBlock,System.Int32)">
+            <summary>
+            Resizes the given image block according to the
+            preferred aspect.
+            </summary>
+            <param name="block">The image block</param>
+            <param name="width">The width</param>
+            <returns>The public URL of the resized image</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Helpers.RequestHelper">
+            <summary>
+            The request helper provides information regarding the
+            current request.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.RequestHelper.Host">
+            <summary>
+            Gets/sets the current hostname.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.RequestHelper.Port">
+            <summary>
+            Gets/sets the current port.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.RequestHelper.Scheme">
+            <summary>
+            Gets/sets the current scheme.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.RequestHelper.Url">
+            <summary>
+            Gets/sets the requested raw url.
+            </summary>
+        </member>
+        <member name="T:Piranha.AspNetCore.Helpers.SiteHelper">
+            <summary>
+            Helper for accessing information about site in
+            the current request.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.SiteHelper.Id">
+            <summary>
+            Gets the id of the currently requested site.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.SiteHelper.Culture">
+            <summary>
+            Gets/sets the optional culture of the requested site.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.SiteHelper.Host">
+            <summary>
+            Gets/set the optional hostname of the requested site.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.SiteHelper.SitePrefix">
+            <summary>
+            Gets/sets the optional site prefic of the requested site
+            if it's routed with `host/prefix`.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.SiteHelper.Sitemap">
+            <summary>
+            Gets the sitemap of the currently requested site.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Helpers.SiteHelper.Description">
+            <summary>
+            Gets/sets the site description.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.SiteHelper.#ctor(Piranha.IApi)">
+            <summary>
+            Default internal constructur.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Helpers.SiteHelper.GetContentAsync``1">
+            <summary>
+            Gets the site content for the current site.
+            </summary>
+            <typeparam name="T">The content type</typeparam>
+            <returns>The site content model</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.HttpCaching">
+            <summary>
+            Helper class for handling HTTP cache headers.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.HttpCaching.IsCached(Microsoft.AspNetCore.Http.HttpContext,Piranha.Web.HttpCacheInfo)">
+            <summary>
+            Checks if the client has the current version cached.
+            </summary>
+            <param name="context">The HTTP Context</param>
+            <param name="serverInfo">The service info</param>
+            <returns>If the client has the same version cached</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.HttpCaching.IsCached(Microsoft.AspNetCore.Http.HttpContext,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            Checks if the client has the current version cached.
+            </summary>
+            <param name="context">The HTTP Context</param>
+            <param name="etag">The entity tag</param>
+            <param name="lastModified">The modification date</param>
+            <returns>If the client has the same version cached</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.HttpCaching.Get(Piranha.Models.PageBase)">
+            <summary>
+            Gets the HTTP Cache info for the given page.
+            </summary>
+            <param name="page">The page</param>
+            <returns>The cache info</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.HttpCaching.Get(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Gets the HTTP Cache info for the given context
+            </summary>
+            <param name="context">The HTTP context</param>
+            <returns>The cache info</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.MiddlewareBase">
+            <summary>
+            Base class for middleware.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.MiddlewareBase._next">
+            <summary>
+            The next middleware in the pipeline.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.MiddlewareBase._logger">
+            <summary>
+            The optional logger.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.MiddlewareBase.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Creates a new middleware instance.
+            </summary>
+            <param name="next">The next middleware in the pipeline</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.MiddlewareBase.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Creates a new middleware instance.
+            </summary>
+            <param name="next">The next middleware in the pipeline</param>
+            <param name="factory">The logger factory</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.MiddlewareBase.Invoke(Microsoft.AspNetCore.Http.HttpContext,Piranha.IApi,Piranha.AspNetCore.Services.IApplicationService)">
+            <summary>
+            Invokes the middleware.
+            </summary>
+            <param name="context">The current http context</param>
+            <param name="api">The current api</param>
+            <param name="service">The application service</param>
+            <returns>An async task</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.MiddlewareBase.IsHandled(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Checks if the request has already been handled by another
+            Piranha middleware.
+            </summary>
+            <param name="context">The current http context</param>
+            <returns>If the request has already been handled</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.MiddlewareBase.IsDraft(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Checks if the request wants a draft.
+            </summary>
+            <param name="context">The current http context</param>
+            <returns>If the request is for a draft</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Models.ArchivePage`1">
+            <summary>
+            Razor Page model for an archive page.
+            </summary>
+            <typeparam name="T">The page type</typeparam>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.ArchivePage`1.#ctor(Piranha.IApi,Piranha.AspNetCore.Services.IModelLoader)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="loader">The model loader</param>
+        </member>
+        <member name="T:Piranha.AspNetCore.Models.ArchivePage`2">
+            <summary>
+            Razor Page model for an archive page.
+            </summary>
+            <typeparam name="T">The page type</typeparam>
+            <typeparam name="TPost">The post type</typeparam>
+        </member>
+        <member name="F:Piranha.AspNetCore.Models.ArchivePage`2._api">
+            <summary>
+            The current api.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.Models.ArchivePage`2._loader">
+            <summary>
+            The current model loader.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.ArchivePage`2.Data">
+            <summary>
+            Gets/sets the model data.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.ArchivePage`2.Archive">
+            <summary>
+            Gets/sets the post archive model.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.ArchivePage`2.#ctor(Piranha.IApi,Piranha.AspNetCore.Services.IModelLoader)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="loader">The model loader</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.ArchivePage`2.OnGet(System.Guid,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Guid},System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            Gets the model data.
+            </summary>
+            <param name="id">The requested model id</param>
+            <param name="year">The optionally requested year</param>
+            <param name="month">The optionally requested month</param>
+            <param name="pagenum">The optionally requested page</param>
+            <param name="category">The optionally requested category</param>
+            <param name="tag">The optionally requested tag</param>
+            <param name="draft">If the draft should be fetched</param>
+        </member>
+        <member name="T:Piranha.AspNetCore.Models.SinglePage`1">
+            <summary>
+            Razor Page model for a single page.
+            </summary>
+            <typeparam name="T">The page type</typeparam>
+        </member>
+        <member name="F:Piranha.AspNetCore.Models.SinglePage`1._api">
+            <summary>
+            The current api.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.Models.SinglePage`1._loader">
+            <summary>
+            The current model loader.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePage`1.Data">
+            <summary>
+            Gets/sets the model data.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePage`1.#ctor(Piranha.IApi,Piranha.AspNetCore.Services.IModelLoader)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="loader">The model loader</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePage`1.OnGet(System.Guid,System.Boolean)">
+            <summary>
+            Gets the model data.
+            </summary>
+            <param name="id">The requested model id</param>
+            <param name="draft">If the draft should be fetched</param>
+        </member>
+        <member name="T:Piranha.AspNetCore.Models.SinglePageWithComments`1">
+            <summary>
+            Razor Page model for a single page with comment helpers.
+            </summary>
+            <typeparam name="T">The page type</typeparam>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePageWithComments`1.Comments">
+            <summary>
+            Gets/sets the available comments.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePageWithComments`1.CommentAuthor">
+            <summary>
+            Author name when a new comment is submitted from
+            the web application.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePageWithComments`1.CommentEmail">
+            <summary>
+            Author email when a new comment is submitted from
+            the web application.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePageWithComments`1.CommentUrl">
+            <summary>
+            Author url when a new comment is submitted from
+            the web application.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePageWithComments`1.CommentBody">
+            <summary>
+            Main body when a new comment is submitted from
+            the web application.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePageWithComments`1.#ctor(Piranha.IApi,Piranha.AspNetCore.Services.IModelLoader)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="loader">The model loader</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePageWithComments`1.OnGet(System.Guid,System.Boolean)">
+            <summary>
+            Gets the model data.
+            </summary>
+            <param name="id">The requested model id</param>
+            <param name="draft">If the draft should be fetched</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePageWithComments`1.OnPostSaveComment(System.Guid,System.Boolean)">
+            <summary>
+            Gets the model data.
+            </summary>
+            <param name="id">The requested model id</param>
+            <param name="draft">If the draft should be fetched</param>
+        </member>
+        <member name="T:Piranha.AspNetCore.Models.SinglePost`1">
+            <summary>
+            Razor Page model for a single post.
+            </summary>
+            <typeparam name="T">The post type</typeparam>
+        </member>
+        <member name="F:Piranha.AspNetCore.Models.SinglePost`1._api">
+            <summary>
+            The current api.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.Models.SinglePost`1._loader">
+            <summary>
+            The current model loader.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePost`1.Data">
+            <summary>
+            Gets/sets the model data.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePost`1.#ctor(Piranha.IApi,Piranha.AspNetCore.Services.IModelLoader)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="loader">The model loader</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePost`1.OnGet(System.Guid,System.Boolean)">
+            <summary>
+            Gets the model data.
+            </summary>
+            <param name="id">The requested model id</param>
+            <param name="draft">If the draft should be fetched</param>
+        </member>
+        <member name="T:Piranha.AspNetCore.Models.SinglePostWithComments`1">
+            <summary>
+            Razor Page model for a single post with comment helpers.
+            </summary>
+            <typeparam name="T">The post type</typeparam>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePostWithComments`1.Comments">
+            <summary>
+            Gets/sets the available comments.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePostWithComments`1.CommentAuthor">
+            <summary>
+            Author name when a new comment is submitted from
+            the web application.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePostWithComments`1.CommentEmail">
+            <summary>
+            Author email when a new comment is submitted from
+            the web application.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePostWithComments`1.CommentUrl">
+            <summary>
+            Author url when a new comment is submitted from
+            the web application.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SinglePostWithComments`1.CommentBody">
+            <summary>
+            Main body when a new comment is submitted from
+            the web application.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePostWithComments`1.#ctor(Piranha.IApi,Piranha.AspNetCore.Services.IModelLoader)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="loader">The model loader</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePostWithComments`1.OnGet(System.Guid,System.Boolean)">
+            <summary>
+            Gets the model data.
+            </summary>
+            <param name="id">The requested model id</param>
+            <param name="draft">If the draft should be fetched</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Models.SinglePostWithComments`1.OnPostSaveComment(System.Guid,System.Boolean)">
+            <summary>
+            Gets the model data.
+            </summary>
+            <param name="id">The requested model id</param>
+            <param name="draft">If the draft should be fetched</param>
+        </member>
+        <member name="T:Piranha.AspNetCore.Models.SiteDescription">
+            <summary>
+            Razor Page model for a single page.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SiteDescription.Title">
+            <summary>
+            Gets/sets the current site title.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SiteDescription.Body">
+            <summary>
+            Gets/sets the current site description.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Models.SiteDescription.Logo">
+            <summary>
+            Gets/sets the current site logo.
+            </summary>
+        </member>
+        <member name="T:Piranha.AspNetCore.PiranhaApplicationBuilder">
+            <summary>
+            Application builder for simple startup.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.PiranhaApplicationBuilder.Builder">
+            <summary>
+            The inner Application Builder.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.PiranhaApplicationBuilder.#ctor(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="builder">The current application builder</param>
+        </member>
+        <member name="T:Piranha.AspNetCore.PiranhaMiddleware">
+            <summary>
+            The main application middleware.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.PiranhaMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Piranha.PiranhaRouteConfig,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Creates a new middleware instance.
+            </summary>
+            <param name="next">The next middleware in the pipeline</param>
+            <param name="config">The current route configuration</param>
+            <param name="factory">The logger factory</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.PiranhaMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext,Piranha.IApi,Piranha.AspNetCore.Services.IApplicationService)">
+            <summary>
+            Invokes the middleware.
+            </summary>
+            <param name="context">The current http context</param>
+            <param name="api">The current api</param>
+            <param name="service">The application service</param>
+            <returns>An async task</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.PiranhaMiddleware.HandleCache(Microsoft.AspNetCore.Http.HttpContext,Piranha.Models.Site,Piranha.Models.RoutedContentBase,System.Int32)">
+            <summary>
+            Handles HTTP Caching Headers and checks if the client has the
+            latest version in cache.
+            </summary>
+            <param name="context">The HTTP Cache</param>
+            <param name="site">The current site</param>
+            <param name="content">The current content</param>
+            <param name="expires">How many minutes the cache should be valid</param>
+            <returns>If the client has the latest version</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.PiranhaMiddleware.GetMatchingHost(Piranha.Models.Site,System.String)">
+            <summary>
+            Gets the matching hostname.
+            </summary>
+            <param name="site">The site</param>
+            <param name="hostname">The requested host</param>
+            <returns>The hostname split into host and prefix</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Security.SecurityBuilder">
+            <summary>
+            The security builder is used for creating application
+            policies that can be selected from the manager
+            interface.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.Security.SecurityBuilder._options">
+            <summary>
+            The policy builder.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Security.SecurityBuilder.#ctor(Microsoft.AspNetCore.Authorization.AuthorizationOptions,Piranha.PiranhaServiceBuilder)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="options">The authorization options</param>
+            <param name="builder">The service builder</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Security.SecurityBuilder.UsePermission(System.String,System.String)">
+            <summary>
+            Uses the specified permission in the application.
+            </summary>
+            <param name="name">The name</param>
+            <param name="title">The optional title. If omitted the name will be used as title</param>
+            <returns>The builder</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Security.SecurityMiddleware">
+            <summary>
+            The security middleware responsible for handling and
+            redirecting unauthorized content requests.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Security.SecurityMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Piranha.PiranhaRouteConfig)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="next">The next middleware component in the pipeline</param>
+            <param name="config">The piranha route config</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Security.SecurityMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,Piranha.AspNetCore.Services.IApplicationService)">
+            <summary>
+            Invokes the middleware.
+            </summary>
+            <param name="ctx">The current http context</param>
+            <param name="service">The piranha application service</param>
+            <returns>An awaitable task</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Services.ApplicationService">
+            <summary>
+            The main application service. This service must be
+            registered as a scoped service as it contains information
+            about the current requst.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.ApplicationService.Api">
+            <summary>
+            Gets the current api.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.ApplicationService.Site">
+            <summary>
+            Gets the site helper.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.ApplicationService.Media">
+            <summary>
+            Gets the media helper.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.ApplicationService.Request">
+            <summary>
+            Gets the request helper.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.ApplicationService.Url">
+            <summary>
+            Gets/sets the currently requested URL.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.ApplicationService.Hostname">
+            <summary>
+            Gets/sets the requested hostname
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.ApplicationService.PageId">
+            <summary>
+            Gets/sets the id of the currently requested page.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.ApplicationService.CurrentPage">
+            <summary>
+            Gets/sets the current page.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.ApplicationService.CurrentPost">
+            <summary>
+            Gets/sets the current post.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.ApplicationService.#ctor(Piranha.IApi)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.ApplicationService.InitAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Initializes the service.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.ApplicationService.GetGravatarUrl(System.String,System.Int32)">
+            <summary>
+            Gets the gravatar URL from the given parameters.
+            </summary>
+            <param name="email">The email address</param>
+            <param name="size">The requested size</param>
+            <returns>The gravatar URL</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.ApplicationService.GetFirstHost(Piranha.Models.Site)">
+            <summary>
+            Gets the first hostname of the site.
+            </summary>
+            <param name="site">The site</param>
+            <returns>The hostname split into host and prefix</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Services.IApplicationService">
+            <summary>
+            The main application service. This service must be
+            registered as a scoped service as it contains information
+            about the current requst.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.IApplicationService.Api">
+            <summary>
+            Gets the current api.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.IApplicationService.Site">
+            <summary>
+            Gets the site helper.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.IApplicationService.Media">
+            <summary>
+            Gets the media helper.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.IApplicationService.Request">
+            <summary>
+            Gets the request helper.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.IApplicationService.PageId">
+            <summary>
+            Gets/sets the id of the currently requested page.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.IApplicationService.CurrentPage">
+            <summary>
+            Gets/sets the current page.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.Services.IApplicationService.CurrentPost">
+            <summary>
+            Gets/sets the current post.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.IApplicationService.InitAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Initializes the service.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.IApplicationService.GetGravatarUrl(System.String,System.Int32)">
+            <summary>
+            Gets the gravatar URL from the given parameters.
+            </summary>
+            <param name="email">The email address</param>
+            <param name="size">The requested size</param>
+            <returns>The gravatar URL</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Services.IModelLoader">
+            <summary>
+            The model loader is used for retrieving content models with
+            built in permission checks for the current user.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.IModelLoader.GetPageAsync``1(System.Guid,System.Security.Claims.ClaimsPrincipal,System.Boolean)">
+            <summary>
+            Gets the specified page model for the given user. If the
+            user doesn't have access to the requested page an
+            UnauthorizedAccessException is thrown.
+            </summary>
+            <param name="id">The unique id</param>
+            <param name="user">The current user</param>
+            <param name="draft">If a draft should be loaded</param>
+            <typeparam name="T">The model type</typeparam>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.IModelLoader.GetPostAsync``1(System.Guid,System.Security.Claims.ClaimsPrincipal,System.Boolean)">
+            <summary>
+            Gets the specified post model for the given user. If the
+            user doesn't have access to the requested post an
+            UnauthorizedAccessException is thrown.
+            </summary>
+            <param name="id">The unique id</param>
+            <param name="user">The current user</param>
+            <param name="draft">If a draft should be loaded</param>
+            <typeparam name="T">The model type</typeparam>
+            <returns>The post model</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.Services.ModelLoader">
+            <summary>
+            The model loader is used for retrieving content models with
+            built in permission checks for the current user.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.Services.ModelLoader._api">
+            <summary>
+            The current api.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.Services.ModelLoader._auth">
+            <summary>
+            The current authorization service.
+            </summary>
+        </member>
+        <member name="F:Piranha.AspNetCore.Services.ModelLoader._app">
+            <summary>
+            The current application service.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.ModelLoader.#ctor(Piranha.IApi,Microsoft.AspNetCore.Authorization.IAuthorizationService,Piranha.AspNetCore.Services.IApplicationService)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="api">The current api</param>
+            <param name="auth">The authorization service</param>
+            <param name="app">The application service</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.ModelLoader.GetPageAsync``1(System.Guid,System.Security.Claims.ClaimsPrincipal,System.Boolean)">
+            <summary>
+            Gets the specified page model for the given user. If the
+            user doesn't have access to the requested page an
+            UnauthorizedAccessException is thrown.
+            </summary>
+            <param name="id">The unique id</param>
+            <param name="user">The current user</param>
+            <param name="draft">If a draft should be loaded</param>
+            <typeparam name="T">The model type</typeparam>
+            <returns>The page model</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.Services.ModelLoader.GetPostAsync``1(System.Guid,System.Security.Claims.ClaimsPrincipal,System.Boolean)">
+            <summary>
+            Gets the specified post model for the given user. If the
+            user doesn't have access to the requested post an
+            UnauthorizedAccessException is thrown.
+            </summary>
+            <param name="id">The unique id</param>
+            <param name="user">The current user</param>
+            <param name="draft">If a draft should be loaded</param>
+            <typeparam name="T">The model type</typeparam>
+            <returns>The post model</returns>
+        </member>
+        <member name="T:Piranha.AspNetCore.SitemapMiddleware">
+            <summary>
+            Middleware used to ouput a xml sitemap based on
+            the content of the current site.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.SitemapMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILoggerFactory,Piranha.PiranhaRouteConfig)">
+            <summary>
+            Creates a new middleware instance.
+            </summary>
+            <param name="next">The next middleware in the pipeline</param>
+            <param name="factory">The logger factory</param>
+            <param name="config">The optional route config</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.SitemapMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext,Piranha.IApi,Piranha.AspNetCore.Services.IApplicationService)">
+            <summary>
+            Invokes the middleware.
+            </summary>
+            <param name="context">The current http context</param>
+            <param name="api">The current api</param>
+            <param name="service">The application service</param>
+            <returns>An async task</returns>
+        </member>
+    </members>
+</doc>

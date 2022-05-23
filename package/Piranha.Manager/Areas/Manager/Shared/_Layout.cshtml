@@ -1,0 +1,191 @@
+﻿@{
+    var module = Piranha.App.Modules.Get<Piranha.Manager.Module>();
+    var prerelease = Piranha.Utils.IsPreRelease(typeof(Piranha.Manager.Module).Assembly) ? "pre-release" : "";
+    var isRightToLeft = @System.Globalization.CultureInfo.CurrentCulture.TextInfo.IsRightToLeft;
+}
+<!doctype html>
+<html lang="en">
+<head>
+     <script src="/assets/plugins/jquery/jquery.js"></script>
+     <script src="/assets/plugins/popper/umd/popper.min.js"></script>
+     <script src="/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+     <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+     <script src="/assets/plugins/jsgrid/jsgrid.min.js"></script>
+     <script src="/assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+     
+     <script src="/assets/plugins/chart.js/Chart.min.js"></script>
+     <script src="/assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+     <script src="/assets/plugins/moment/moment.min.js"></script>
+     <script src="/assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+     <script src="/assets/plugins/daterangepicker/daterangepicker.js"></script>
+     <script src="/assets/plugins/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js"></script>
+     <script src="/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+     <script src="/assets/plugins/summernote/summernote-bs4.min.js"></script>
+     <script src="/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+     <script src="/assets/plugins/select2/js/select2.full.js"></script>
+     <script src="/assets/plugins/inputmask/jquery.inputmask.bundle.js"></script>
+     <script src="/assets/plugins/chart.js/Chart.js"></script>
+     <script src="/assets/plugins/datatables/datatables.js"></script>
+     <script src="/assets/plugins/FileSaver/FileSaver.js"></script>
+     <script src="/assets/plugins/FileSaver/jquery.wordexport.js"></script>
+     <script src="/assets/plugins/datatables-rowgroup/dataTables.rowsGroup.js"></script>
+     <script src="/assets/plugins/TimeLine/src/jquery.timelineMe.js"></script>
+
+
+     <script src="/assets/plugins/fullcalendar/main.min.js"></script>
+     <script src="/assets/plugins/fullcalendar-daygrid/main.min.js"></script>
+     <script src="/assets/plugins/fullcalendar-timegrid/main.min.js"></script>
+     <script src="/assets/plugins/fullcalendar-interaction/main.min.js"></script>
+     <script src="/assets/plugins/fullcalendar-bootstrap/main.min.js"></script>
+     <script src="/assets/plugins/fullcalendar/locales-all.min.js"></script>
+     <script src="/assets/plugins/fullcalendar/locales/vi.js"></script>
+     
+   
+     
+
+     <link rel="stylesheet" href="/assets/plugins/fontawesome-free/css/all.min.css">
+     <link rel="stylesheet" href="/assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+     <link rel="stylesheet" href="/assets/plugins/jsgrid/jsgrid.min.css">
+     <link rel="stylesheet" href="/assets/plugins/jsgrid/jsgrid-theme.min.css">
+     
+     <link rel="stylesheet" href="/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+     <link rel="stylesheet" href="/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+     <link rel="stylesheet" href="/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+     <link rel="stylesheet" href="/assets/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+     <link rel="stylesheet" href="/assets/plugins/daterangepicker/daterangepicker.css">
+     <link rel="stylesheet" href="/assets/plugins/summernote/summernote-bs4.css">
+     <link rel="stylesheet" href="/assets/plugins/select2/css/select2.css">
+     <link rel="stylesheet" href="/assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.css">
+     <link rel="stylesheet" href="/assets/plugins/datatables/datatables.css">
+     <link rel="stylesheet" href="/assets/plugins/TimeLine/src/jquery.timelineMe.css">
+     <link rel="stylesheet" href="/assets/plugins/TimeLine/prism/prism.css">
+     <link rel="stylesheet" href="/assets/plugins/fullcalendar/main.min.css">
+    @* <link rel="stylesheet" href="/assets/plugins/fullcalendar-interaction/main.min.css">*@
+     <link rel="stylesheet" href="/assets/plugins/fullcalendar-daygrid/main.min.css">
+     <link rel="stylesheet" href="/assets/plugins/fullcalendar-timegrid/main.min.css">
+     <link rel="stylesheet" href="/assets/plugins/fullcalendar-bootstrap/main.min.css">
+
+     <script src="/assets/Scripts/jquery.validate.js"></script>
+     <script src="/assets/Scripts/jquery.validate.min.js"></script>
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @if (isRightToLeft)
+    {
+        <link rel="stylesheet" href="~/manager/assets/css/full.rtl.min.css">
+    }
+    else
+    {
+        <link rel="stylesheet" href="~/manager/assets/css/full.min.css">
+    }
+    <link rel="icon" href="~/manager/assets/img/logo.png">
+
+    @foreach (var style in module.Styles)
+    {
+        <link href="@Url.Content(style)" rel="stylesheet" type="text/css" />
+    }
+    
+     
+    <title>@ViewBag.Title</title>
+    <script src="/assets/plugins/toastr/toastr.min.js"></script>
+     <link rel="stylesheet" href="/assets/plugins/toastr/toastr.min.css">
+     
+      <script src="/assets/Scripts/Site.js"></script>
+     <link rel="stylesheet" href="/assets/Scripts/Site.css"> 
+
+ 
+</head>
+<body class="@prerelease">
+    @if (!string.IsNullOrEmpty(prerelease))
+    {
+        <div class="pre-release">Pre-release</div>
+    }
+    <partial name="~/Areas/Manager/Shared/Partial/_Menu.cshtml" />
+
+    @RenderBody()
+
+    <partial name="~/Areas/Manager/Shared/Partial/_BlockPickerModal.cshtml" />
+    <partial name="~/Areas/Manager/Shared/Partial/_MediaPickerModal.cshtml" />
+    <partial name="~/Areas/Manager/Shared/Partial/_ContentPickerModal.cshtml" />
+    <partial name="~/Areas/Manager/Shared/Partial/_PagePickerModal.cshtml" />
+    <partial name="~/Areas/Manager/Shared/Partial/_PostPickerModal.cshtml" />
+    <partial name="~/Areas/Manager/Shared/Partial/_PreviewModal.cshtml" />
+    <partial name="~/Areas/Manager/Shared/Partial/_LanguageEditModal.cshtml" />
+    <partial name="~/Areas/Manager/Shared/Partial/_Notifications.cshtml" />
+    <partial name="~/Areas/Manager/Shared/Partial/_MediaUploadTemplate.cshtml" />
+    <partial name="~/Areas/Manager/Shared/Partial/_AlertDialog.cshtml" />
+    @foreach (var partial in module.Partials)
+    {
+        <partial name="@partial" />
+    }
+
+    <script type="text/javascript">
+        var piranha = {};
+        window.piranha = piranha;
+        piranha.baseUrl = "@Url.Content("~/")";
+    </script>
+
+    <partial name="~/Areas/Manager/Shared/Partial/_EditorConfig.cshtml" />
+
+    @RenderSection("partials", required: false)
+
+    <environment include="Development">
+        <script type="text/javascript" src="~/manager/assets/js/piranha-deps-dev.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script type="text/javascript" src="~/manager/assets/js/piranha-deps.min.js"></script>
+    </environment>
+    @foreach (var script in module.Scripts.Where(s => s.RenderBeforeCoreScripts))
+    {
+        if (string.IsNullOrWhiteSpace(script.Integrity))
+        {
+            <script type="@script.Type" src="@Url.Content(script.Src)"></script>
+        }
+        else if (script.CrossOriginValue == ECrossOriginPolicy.None)
+        {
+            <script type="@script.Type" src="@Url.Content(script.Src)" integrity="@script.Integrity"></script>
+        }
+        else
+        {
+            <script type="@script.Type" src="@Url.Content(script.Src)" integrity="@script.Integrity" crossorigin="@script.GetCrossOriginValueStrValue()"></script>
+        }
+    }
+    <script type="text/javascript" src="~/manager/assets/js/piranha.min.js"></script>
+    <script type="text/javascript">
+        Vue.prototype.piranha = window.piranha;
+    </script>
+
+    @if (!string.IsNullOrWhiteSpace(ViewBag.Message))
+    {
+        <script>
+            piranha.notifications.push({
+                body: "@Html.Raw(ViewBag.Message)",
+                type: "@Html.Raw(ViewBag.MessageCss)",
+                hide: true
+            });
+        </script>
+    }
+
+    <partial name="~/Areas/Manager/Shared/Partial/_Resources.cshtml" />
+
+    @foreach (var script in module.Scripts.Where(s => !s.RenderBeforeCoreScripts))
+    {
+        if (string.IsNullOrWhiteSpace(script.Integrity))
+        {
+            <script type="@script.Type" src="@Url.Content(script.Src)"></script>
+        }
+        else if (script.CrossOriginValue == ECrossOriginPolicy.None)
+        {
+            <script type="@script.Type" src="@Url.Content(script.Src)" integrity="@script.Integrity"></script>
+        }
+        else
+        {
+            <script type="@script.Type" src="@Url.Content(script.Src)" integrity="@script.Integrity" crossorigin="@script.GetCrossOriginValueStrValue()"></script>
+        }
+    }
+    @RenderSection("script", required: false)
+</body>
+</html>

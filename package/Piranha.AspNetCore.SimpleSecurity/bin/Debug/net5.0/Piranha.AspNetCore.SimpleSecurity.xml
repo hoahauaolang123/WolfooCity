@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.AspNetCore.SimpleSecurity</name>
+    </assembly>
+    <members>
+        <member name="P:Piranha.AspNetCore.SimpleSecurity.Users">
+            <summary>
+            Gets/sets the available users.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.SimpleSecurity.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.SimpleSecurity.#ctor(Piranha.AspNetCore.SimpleUser[])">
+            <summary>
+            Creates a new security object for the given users.
+            </summary>
+            <param name="users">The users</param>
+        </member>
+        <member name="M:Piranha.AspNetCore.SimpleSecurity.Authenticate(System.String,System.String)">
+            <summary>
+            Authenticates the given credentials without
+            signing in the user.
+            </summary>
+            <param name="username">The username</param>
+            <param name="password">The password</param>
+            <returns>If the given credentials were correct</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.SimpleSecurity.SignIn(System.Object,System.String,System.String)">
+            <summary>
+            Authenticates and signs in the user with the
+            given credentials.
+            </summary>
+            <param name="context">The current application context</param>
+            <param name="username">The username</param>
+            <param name="password">The password</param>
+            <returns>If the user was signed in</returns>
+        </member>
+        <member name="M:Piranha.AspNetCore.SimpleSecurity.SignOut(System.Object)">
+            <summary>
+            Signs out the current user.
+            </summary>
+            <param name="context">The current application context</param>
+        </member>
+        <member name="T:Piranha.AspNetCore.SimpleUser">
+            <summary>
+            The simplest user ever.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.SimpleUser.Id">
+            <summary>
+            Gets/sets the user id.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.SimpleUser.UserName">
+            <summary>
+            Gets/sets the user name.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.SimpleUser.Password">
+            <summary>
+            Gets/sets the user password.
+            </summary>
+        </member>
+        <member name="P:Piranha.AspNetCore.SimpleUser.Claims">
+            <summary>
+            Gets/sets the user claims.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.SimpleUser.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Piranha.AspNetCore.SimpleUser.#ctor(System.String[])">
+            <summary>
+            Creates a new user with the given claims.
+            </summary>
+            <param name="claims">The claims</param>
+        </member>
+        <member name="M:SimpleSecurityExtensions.AddPiranhaSimpleSecurity(Microsoft.Extensions.DependencyInjection.IServiceCollection,Piranha.AspNetCore.SimpleUser[])">
+            <summary>
+            Adds the simple security implementation to the service collection.
+            </summary>
+            <param name="services">The current service collection</param>
+            <param name="users">The users to add for authentication</param>
+            <returns>The updated collection</returns>
+        </member>
+        <member name="M:SimpleSecurityExtensions.UsePiranhaSimpleSecurity(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Uses the piranha simple security implementation.
+            </summary>
+            <param name="builder">The current application builder</param>
+            <returns>The builder</returns>
+        </member>
+    </members>
+</doc>

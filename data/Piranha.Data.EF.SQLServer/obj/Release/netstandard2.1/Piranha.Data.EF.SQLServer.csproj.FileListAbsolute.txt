@@ -1,0 +1,17 @@
+C:\Repo\data\Piranha.Data.EF.SQLServer\bin\Release\netstandard2.1\Piranha.Data.EF.SQLServer.deps.json
+C:\Repo\data\Piranha.Data.EF.SQLServer\bin\Release\netstandard2.1\Piranha.Data.EF.SQLServer.dll
+C:\Repo\data\Piranha.Data.EF.SQLServer\bin\Release\netstandard2.1\Piranha.Data.EF.SQLServer.pdb
+C:\Repo\data\Piranha.Data.EF.SQLServer\bin\Release\netstandard2.1\Piranha.Data.EF.dll
+C:\Repo\data\Piranha.Data.EF.SQLServer\bin\Release\netstandard2.1\Piranha.dll
+C:\Repo\data\Piranha.Data.EF.SQLServer\bin\Release\netstandard2.1\Piranha.pdb
+C:\Repo\data\Piranha.Data.EF.SQLServer\bin\Release\netstandard2.1\Piranha.xml
+C:\Repo\data\Piranha.Data.EF.SQLServer\bin\Release\netstandard2.1\Piranha.Data.EF.pdb
+C:\Repo\data\Piranha.Data.EF.SQLServer\bin\Release\netstandard2.1\Piranha.Data.EF.xml
+C:\Repo\data\Piranha.Data.EF.SQLServer\obj\Release\netstandard2.1\Piranha.Data.EF.SQLServer.csprojAssemblyReference.cache
+C:\Repo\data\Piranha.Data.EF.SQLServer\obj\Release\netstandard2.1\Piranha.Data.EF.SQLServer.AssemblyInfoInputs.cache
+C:\Repo\data\Piranha.Data.EF.SQLServer\obj\Release\netstandard2.1\Piranha.Data.EF.SQLServer.AssemblyInfo.cs
+C:\Repo\data\Piranha.Data.EF.SQLServer\obj\Release\netstandard2.1\Piranha.Data.EF.SQLServer.csproj.CoreCompileInputs.cache
+C:\Repo\data\Piranha.Data.EF.SQLServer\obj\Release\netstandard2.1\Piranha.Data.EF.SQLServer.sourcelink.json
+C:\Repo\data\Piranha.Data.EF.SQLServer\obj\Release\netstandard2.1\Piranha.Data.EF.SQLServer.csproj.CopyComplete
+C:\Repo\data\Piranha.Data.EF.SQLServer\obj\Release\netstandard2.1\Piranha.Data.EF.SQLServer.dll
+C:\Repo\data\Piranha.Data.EF.SQLServer\obj\Release\netstandard2.1\Piranha.Data.EF.SQLServer.pdb

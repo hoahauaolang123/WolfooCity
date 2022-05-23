@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Piranha.Manager.TinyMCE</name>
+    </assembly>
+    <members>
+        <member name="T:Piranha.Manager.TinyMCE.Module">
+            <summary>
+            Module definition for the TinyMCE module.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.TinyMCE.Module.Author">
+            <summary>
+            Gets the Author
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.TinyMCE.Module.Name">
+            <summary>
+            Gets the Name
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.TinyMCE.Module.Version">
+            <summary>
+            Gets the Version
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.TinyMCE.Module.Description">
+            <summary>
+            Gets the description
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.TinyMCE.Module.PackageUrl">
+            <summary>
+            Gets the package url.
+            </summary>
+        </member>
+        <member name="P:Piranha.Manager.TinyMCE.Module.IconUrl">
+            <summary>
+            Gets the icon url.
+            </summary>
+        </member>
+        <member name="F:Piranha.Manager.TinyMCE.Module.Assembly">
+            <summary>
+            The assembly.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.TinyMCE.Module.#cctor">
+            <summary>
+            Static initialization.
+            </summary>
+        </member>
+        <member name="M:Piranha.Manager.TinyMCE.Module.Init">
+            <summary>
+            Initializes the module.
+            </summary>
+        </member>
+        <member name="T:TinyMCEExtensions">
+            <summary>
+            Extension class for adding TinyMCE to the web application.
+            </summary>
+        </member>
+        <member name="M:TinyMCEExtensions.AddPiranhaTinyMCE(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the Tiny MCE editor module.
+            </summary>
+            <param name="services">The current service collection</param>
+            <returns>The services</returns>
+        </member>
+        <member name="M:TinyMCEExtensions.UsePiranhaTinyMCE(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Uses the Tiny MCE editor module.
+            </summary>
+            <param name="builder">The application builder</param>
+            <returns>The builder</returns>
+        </member>
+        <member name="T:TinyMCEStartupExtensions">
+            <summary>
+            Extension class for adding TinyMCE to the web application.
+            </summary>
+        </member>
+        <member name="M:TinyMCEStartupExtensions.UseTinyMCE(Piranha.PiranhaServiceBuilder)">
+            <summary>
+            Adds the Tiny MCE editor module if simple startup is used.
+            </summary>
+            <param name="serviceBuilder">The service builder</param>
+            <returns>The updated builder</returns>
+        </member>
+        <member name="M:TinyMCEStartupExtensions.UseTinyMCE(Piranha.AspNetCore.PiranhaApplicationBuilder)">
+            <summary>
+            Uses the Tiny MCE editor module if simple startup is used.
+            </summary>
+            <param name="applicationBuilder">The application builder</param>
+            <returns>The updated builder</returns>
+        </member>
+    </members>
+</doc>
